@@ -1,0 +1,886 @@
+
+.truss-page {
+  --truss-navy: #17232D;
+  --truss-orange: #F28C28;
+  --truss-light: #F3F5F6;
+  --truss-grey: #777777;
+  color: var(--truss-navy);
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
+}
+
+.truss-page * {
+  box-sizing: border-box;
+}
+
+.truss-page img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.truss-page h1,
+.truss-page h2,
+.truss-page h3 {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.15;
+}
+
+.truss-container {
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.truss-section {
+  padding: 52px 0;
+}
+
+.truss-section h2,
+.truss-why h2,
+.truss-cta h2 {
+  font-size: clamp(25px, 3vw, 36px);
+  font-weight: 800;
+  margin: 12px 0;
+  letter-spacing: -0.8px;
+}
+
+.truss-section p,
+.truss-why p,
+.truss-cta p {
+  color: var(--truss-grey);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.truss-badge {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--truss-navy);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.truss-badge span {
+  color: var(--truss-orange);
+  font-size: 23px;
+  font-weight: 900;
+  line-height: 1;
+  transform: skew(-12deg);
+}
+
+/* BUTTONS */
+
+.truss-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 0 21px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.truss-btn-orange {
+  background: var(--truss-orange);
+  color: #FFFFFF;
+  border: 1px solid var(--truss-orange);
+}
+
+.truss-btn-orange:hover {
+  background: #D97616;
+  border-color: #D97616;
+  transform: translateY(-3px);
+}
+
+.truss-btn-outline {
+  border: 1px solid rgba(255,255,255,0.85);
+  color: #FFFFFF;
+}
+
+.truss-btn-outline:hover {
+  background: #FFFFFF;
+  color: var(--truss-navy);
+}
+
+/* HERO */
+
+.truss-hero {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  background: var(--truss-navy);
+  isolation: isolate;
+}
+
+.truss-hero-image,
+.truss-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.truss-hero-image {
+  background-image: url("/images/services/truss/truss-hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.truss-hero-overlay {
+  background: linear-gradient(
+    90deg,
+    rgba(13,29,42,0.97) 0%,
+    rgba(13,29,42,0.87) 33%,
+    rgba(13,29,42,0.25) 68%,
+    rgba(13,29,42,0.05) 100%
+  );
+}
+
+.truss-hero-content {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  color: #FFFFFF;
+}
+
+.truss-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.82);
+  margin-bottom: 23px;
+}
+
+.truss-breadcrumb a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.truss-breadcrumb a:hover {
+  color: var(--truss-orange);
+}
+
+.truss-breadcrumb span {
+  color: var(--truss-orange);
+}
+
+.truss-hero h1 {
+  font-size: clamp(45px, 6vw, 70px);
+  margin: 0;
+  font-weight: 850;
+  line-height: 1.02;
+  color: #FFFFFF;
+}
+
+.truss-hero h1 span {
+  color: var(--truss-orange);
+}
+
+.truss-hero-content > p {
+  max-width: 470px;
+  color: rgba(255,255,255,0.9);
+  font-size: 16px;
+  line-height: 1.65;
+  margin: 19px 0 24px;
+}
+
+.truss-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.truss-hero-accent {
+  position: absolute;
+  right: 7%;
+  bottom: 0;
+  width: 65px;
+  height: 100px;
+  background: var(--truss-orange);
+  transform: skew(-30deg) translateX(60px);
+}
+
+/* OVERVIEW */
+
+.truss-overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.truss-overview-image,
+.truss-benefits-image {
+  height: 310px;
+  position: relative;
+  z-index: 1;
+}
+
+.truss-overview-image img,
+.truss-benefits-image img {
+  position: relative;
+  z-index: 1;
+  border-radius: 9px;
+}
+
+.truss-image-accent {
+  position: absolute;
+  width: 65px;
+  height: 75%;
+  left: -15px;
+  bottom: -14px;
+  background: var(--truss-orange);
+  border-radius: 6px;
+}
+
+.truss-overview-content h2 {
+  max-width: 570px;
+}
+
+.truss-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 25px;
+}
+
+.truss-feature {
+  min-height: 85px;
+  padding: 0 9px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  border-right: 1px solid #D7DEE3;
+}
+
+.truss-feature:last-child {
+  border-right: 0;
+}
+
+.truss-feature svg {
+  width: 31px;
+  height: 31px;
+  color: var(--truss-orange);
+  stroke-width: 2;
+}
+
+.truss-feature strong {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* SOLUTIONS */
+
+.truss-solutions {
+  background: #FFFFFF;
+}
+
+.truss-solutions-layout {
+  display: grid;
+  grid-template-columns: 0.65fr 2.35fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.truss-solutions-heading h2 {
+  font-size: 30px;
+}
+
+.truss-solutions-heading p {
+  margin-bottom: 0;
+}
+
+.truss-solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 13px;
+}
+
+.truss-solution-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E9EC;
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: 0 6px 17px rgba(23,35,45,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.truss-solution-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(23,35,45,0.13);
+}
+
+.truss-solution-image {
+  height: 140px;
+  position: relative;
+  overflow: hidden;
+}
+
+.truss-solution-image img {
+  transition: transform 0.5s ease;
+}
+
+.truss-solution-card:hover .truss-solution-image img {
+  transform: scale(1.07);
+}
+
+.truss-solution-number {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  padding: 5px 8px;
+  border-radius: 4px;
+  background: var(--truss-orange);
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.truss-solution-content {
+  min-height: 135px;
+  position: relative;
+  padding: 12px 36px 14px 12px;
+}
+
+.truss-solution-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+}
+
+.truss-solution-title svg {
+  color: var(--truss-orange);
+  flex-shrink: 0;
+}
+
+.truss-solution-title h3 {
+  font-size: 12px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.truss-solution-content p {
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 8px 0 0;
+}
+
+.truss-solution-content > a {
+  position: absolute;
+  right: 9px;
+  bottom: 12px;
+  width: 29px;
+  height: 29px;
+  border-radius: 5px;
+  background: var(--truss-orange);
+  color: #FFFFFF;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.truss-solution-content > a:hover {
+  background: var(--truss-navy);
+}
+
+/* BENEFITS */
+
+.truss-benefits-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.truss-benefits-content h2 {
+  max-width: 570px;
+}
+
+.truss-benefit-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 18px;
+  margin-top: 23px;
+}
+
+.truss-benefit-list > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.truss-benefit-list svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--truss-orange);
+}
+
+/* PROCESS */
+
+.truss-process {
+  background: var(--truss-light);
+}
+
+.truss-process-layout {
+  display: grid;
+  grid-template-columns: 0.75fr 2.25fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.truss-process-heading h2 {
+  font-size: 30px;
+}
+
+.truss-process-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.truss-process-step {
+  position: relative;
+  text-align: center;
+  padding: 0 5px;
+}
+
+.truss-process-number {
+  display: grid;
+  place-items: center;
+  width: 39px;
+  height: 39px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  background: var(--truss-orange);
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 800;
+  position: relative;
+  z-index: 2;
+}
+
+.truss-process-line {
+  position: absolute;
+  top: 19px;
+  left: calc(50% + 22px);
+  width: calc(100% - 15px);
+  height: 1px;
+  background: var(--truss-orange);
+}
+
+.truss-process-icon {
+  width: 29px;
+  height: 29px;
+  color: var(--truss-orange);
+  margin-bottom: 9px;
+}
+
+.truss-process-step h3 {
+  font-size: 12px;
+  margin: 0 0 7px;
+  line-height: 1.4;
+}
+
+.truss-process-step p {
+  font-size: 12px;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* WHY MARS POWER CONTROLS */
+
+.truss-why {
+  position: relative;
+  padding: 48px 0;
+  background: var(--truss-navy);
+  color: #FFFFFF;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.truss-why-image {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(13,29,42,0.97) 0%,
+      rgba(13,29,42,0.76) 48%,
+      rgba(13,29,42,0.9) 100%
+    ),
+    url("/images/services/truss/truss-why.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.truss-why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.truss-why .truss-badge {
+  color: #FFFFFF;
+}
+
+.truss-why h2 {
+  color: #FFFFFF;
+}
+
+.truss-why p {
+  color: rgba(255,255,255,0.83);
+  max-width: 440px;
+}
+
+.truss-company-strengths {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 13px;
+}
+
+.truss-company-strengths > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.truss-company-strengths svg {
+  width: 20px;
+  height: 20px;
+  color: var(--truss-orange);
+  flex-shrink: 0;
+}
+
+/* PROJECTS */
+
+.truss-projects-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.truss-projects-heading h2 {
+  max-width: 470px;
+}
+
+.truss-projects-heading > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--truss-orange);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.truss-project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 19px;
+}
+
+.truss-project-card {
+  height: 225px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 9px;
+  background: var(--truss-light);
+}
+
+.truss-project-card img {
+  transition: transform 0.5s ease;
+}
+
+.truss-project-card:hover img {
+  transform: scale(1.07);
+}
+
+.truss-project-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 28px 16px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: #FFFFFF;
+  background: linear-gradient(
+    transparent,
+    rgba(12,25,36,0.9)
+  );
+}
+
+.truss-project-overlay h3 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.truss-project-overlay svg {
+  color: var(--truss-orange);
+}
+
+/* CTA */
+
+.truss-cta {
+  position: relative;
+  padding: 43px 0;
+  background: var(--truss-navy);
+  color: #FFFFFF;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.truss-cta-image {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(17,35,48,0.96),
+      rgba(17,35,48,0.82)
+    ),
+    url("/images/services/truss/truss-cta.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.truss-cta-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.truss-cta .truss-badge {
+  color: #FFFFFF;
+}
+
+.truss-cta h2 {
+  color: #FFFFFF;
+  margin-top: 10px;
+  max-width: 700px;
+}
+
+.truss-cta p {
+  color: rgba(255,255,255,0.82);
+  margin: 0;
+}
+
+.truss-cta .truss-btn {
+  flex-shrink: 0;
+  min-width: 155px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1050px) {
+  .truss-overview-grid,
+  .truss-benefits-grid {
+    gap: 35px;
+  }
+
+  .truss-solutions-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .truss-solutions-heading {
+    max-width: 550px;
+  }
+
+  .truss-solutions-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .truss-process-layout {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 700px) {
+  .truss-container {
+    width: min(100% - 32px, 540px);
+  }
+
+  .truss-section {
+    padding: 40px 0;
+  }
+
+  .truss-hero {
+    min-height: 480px;
+    align-items: end;
+  }
+
+  .truss-hero-image {
+    background-position: 62% center;
+  }
+
+  .truss-hero-overlay {
+    background: linear-gradient(
+      0deg,
+      rgba(13,29,42,0.98) 0%,
+      rgba(13,29,42,0.87) 48%,
+      rgba(13,29,42,0.22) 100%
+    );
+  }
+
+  .truss-hero-content {
+    padding-top: 100px;
+    padding-bottom: 35px;
+  }
+
+  .truss-hero h1 {
+    font-size: 48px;
+  }
+
+  .truss-hero-content > p {
+    font-size: 14px;
+  }
+
+  .truss-hero-actions {
+    align-items: stretch;
+  }
+
+  .truss-btn {
+    padding: 0 14px;
+    font-size: 13px;
+  }
+
+  .truss-hero-accent {
+    width: 35px;
+    height: 65px;
+    right: 10%;
+  }
+
+  .truss-overview-grid,
+  .truss-benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .truss-overview-image,
+  .truss-benefits-image {
+    height: 245px;
+  }
+
+  .truss-feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 14px;
+  }
+
+  .truss-feature:nth-child(2) {
+    border-right: 0;
+  }
+
+  .truss-solutions-layout {
+    grid-template-columns: 1fr;
+    gap: 23px;
+  }
+
+  .truss-solutions-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .truss-solution-image {
+    height: 125px;
+  }
+
+  .truss-solution-content {
+    min-height: 140px;
+  }
+
+  .truss-benefit-list {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .truss-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 12px;
+  }
+
+  .truss-process-line {
+    display: none;
+  }
+
+  .truss-process-step:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .truss-why-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .truss-company-strengths {
+    gap: 13px;
+  }
+
+  .truss-projects-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .truss-project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .truss-project-card {
+    height: 220px;
+  }
+
+  .truss-cta-content {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .truss-cta h2 {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 380px) {
+  .truss-hero-actions {
+    flex-direction: column;
+  }
+
+  .truss-hero-actions .truss-btn {
+    width: 100%;
+  }
+
+  .truss-solutions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .truss-solution-image {
+    height: 185px;
+  }
+}

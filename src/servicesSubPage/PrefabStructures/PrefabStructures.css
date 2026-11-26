@@ -1,0 +1,872 @@
+
+.prefab-page {
+  --prefab-navy: #17232D;
+  --prefab-orange: #F28C28;
+  --prefab-light: #F3F5F6;
+  --prefab-white: #FFFFFF;
+  --prefab-grey: #777777;
+  color: var(--prefab-navy);
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
+}
+
+.prefab-page * {
+  box-sizing: border-box;
+}
+
+.prefab-page h1,
+.prefab-page h2,
+.prefab-page h3 {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.15;
+}
+
+.prefab-page img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prefab-container {
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.prefab-section {
+  padding: 64px 0;
+}
+
+.prefab-section h2,
+.prefab-why h2,
+.prefab-cta h2 {
+  font-size: clamp(25px, 3vw, 36px);
+  font-weight: 800;
+  margin: 12px 0;
+  letter-spacing: -0.8px;
+}
+
+.prefab-section p,
+.prefab-why p,
+.prefab-cta p {
+  color: var(--prefab-grey);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.prefab-badge {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--prefab-navy);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.prefab-badge-mark {
+  color: var(--prefab-orange);
+  font-size: 23px;
+  font-weight: 900;
+  line-height: 1;
+  transform: skew(-12deg);
+}
+
+/* BUTTONS */
+
+.prefab-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 0 21px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.prefab-btn-orange {
+  background: var(--prefab-orange);
+  color: #FFFFFF;
+  border: 1px solid var(--prefab-orange);
+}
+
+.prefab-btn-orange:hover {
+  background: #D97616;
+  border-color: #D97616;
+  transform: translateY(-3px);
+}
+
+.prefab-btn-outline {
+  border: 1px solid rgba(255,255,255,0.8);
+  color: #FFFFFF;
+}
+
+.prefab-btn-outline:hover {
+  background: #FFFFFF;
+  color: var(--prefab-navy);
+}
+
+/* HERO */
+
+.prefab-hero {
+  position: relative;
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+  background: var(--prefab-navy);
+  isolation: isolate;
+}
+
+.prefab-hero-image,
+.prefab-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.prefab-hero-image {
+  background-image: url("/images/services/prefab/prefab-hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.prefab-hero-overlay {
+  background: linear-gradient(
+    90deg,
+    rgba(12, 28, 41, 0.97) 0%,
+    rgba(12, 28, 41, 0.88) 32%,
+    rgba(12, 28, 41, 0.28) 68%,
+    rgba(12, 28, 41, 0.05) 100%
+  );
+}
+
+.prefab-hero-content {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  color: #FFFFFF;
+}
+
+.prefab-breadcrumb {
+  font-size: 13px;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 24px;
+}
+
+.prefab-breadcrumb span {
+  color: var(--prefab-orange);
+  padding: 0 7px;
+}
+
+.prefab-hero h1 {
+  font-size: clamp(42px, 6vw, 68px);
+  max-width: 540px;
+  margin: 0;
+  font-weight: 850;
+  line-height: 1.02;
+  color: #FFFFFF;
+}
+
+.prefab-hero h1 span {
+  display: block;
+  color: var(--prefab-orange);
+}
+
+.prefab-hero-content > p {
+  max-width: 470px;
+  color: rgba(255,255,255,0.9);
+  font-size: 16px;
+  line-height: 1.65;
+  margin: 19px 0 24px;
+}
+
+.prefab-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.prefab-hero-accent {
+  position: absolute;
+  right: 5%;
+  bottom: 0;
+  width: 65px;
+  height: 100px;
+  background: var(--prefab-orange);
+  transform: skew(-30deg) translateX(60px);
+  opacity: 0.95;
+}
+
+/* OVERVIEW */
+
+.prefab-overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 58px;
+  align-items: center;
+}
+
+.prefab-overview-image {
+  height: 330px;
+  position: relative;
+  z-index: 1;
+}
+
+.prefab-overview-image img,
+.prefab-engineering-image img {
+  border-radius: 9px;
+  position: relative;
+  z-index: 1;
+}
+
+.prefab-image-accent {
+  position: absolute;
+  width: 65px;
+  height: 75%;
+  left: -15px;
+  bottom: -14px;
+  background: var(--prefab-orange);
+  border-radius: 6px;
+}
+
+.prefab-overview-content h2 {
+  max-width: 560px;
+}
+
+.prefab-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 28px;
+}
+
+.prefab-feature {
+  min-height: 85px;
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  border-right: 1px solid #D7DEE3;
+}
+
+.prefab-feature:last-child {
+  border-right: 0;
+}
+
+.prefab-feature svg {
+  width: 30px;
+  height: 30px;
+  color: var(--prefab-orange);
+  stroke-width: 2;
+}
+
+.prefab-feature strong {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* TYPES */
+
+.prefab-types {
+  background: var(--prefab-light);
+}
+
+.prefab-types-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.prefab-types-heading h2 {
+  max-width: 460px;
+}
+
+.prefab-types-heading > p {
+  max-width: 390px;
+  margin-bottom: 14px;
+}
+
+.prefab-types-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.prefab-type-card {
+  overflow: hidden;
+  background: #FFFFFF;
+  border-radius: 9px;
+  border: 1px solid #E5E9EC;
+  box-shadow: 0 5px 18px rgba(23,35,45,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prefab-type-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 25px rgba(23,35,45,0.12);
+}
+
+.prefab-type-image {
+  height: 165px;
+  position: relative;
+  overflow: hidden;
+}
+
+.prefab-type-image img {
+  transition: transform 0.5s ease;
+}
+
+.prefab-type-card:hover .prefab-type-image img {
+  transform: scale(1.07);
+}
+
+.prefab-type-number {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--prefab-orange);
+  color: #FFFFFF;
+  padding: 5px 9px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.prefab-type-content {
+  padding: 17px 15px 19px;
+}
+
+.prefab-type-content > svg {
+  color: var(--prefab-orange);
+  margin-bottom: 8px;
+}
+
+.prefab-type-content h3 {
+  font-size: 15px;
+  margin: 0 0 8px;
+}
+
+.prefab-type-content p {
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ENGINEERING */
+
+.prefab-engineering-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 58px;
+}
+
+.prefab-engineering-image {
+  height: 330px;
+  position: relative;
+}
+
+.prefab-engineering-image::before {
+  content: "";
+  position: absolute;
+  left: -13px;
+  bottom: -13px;
+  width: 70px;
+  height: 70%;
+  background: var(--prefab-orange);
+  border-radius: 7px;
+}
+
+.prefab-engineering-content {
+  position: relative;
+}
+
+.prefab-check-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 17px 20px;
+  margin-top: 25px;
+}
+
+.prefab-check-grid span {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.prefab-check-grid svg {
+  flex-shrink: 0;
+  color: var(--prefab-orange);
+  width: 18px;
+  height: 18px;
+}
+
+/* INDUSTRIES */
+
+.prefab-industries {
+  background: var(--prefab-light);
+}
+
+.prefab-industries-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.prefab-industries-heading .prefab-badge {
+  justify-content: center;
+}
+
+.prefab-industries-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.prefab-industry {
+  min-height: 120px;
+  padding: 15px;
+  text-align: center;
+  border-right: 1px solid #CFD7DD;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+}
+
+.prefab-industry:last-child {
+  border: 0;
+}
+
+.prefab-industry svg {
+  width: 34px;
+  height: 34px;
+  color: var(--prefab-orange);
+  stroke-width: 1.8;
+}
+
+.prefab-industry h3 {
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* PROCESS */
+
+.prefab-process-heading {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.prefab-process-heading .prefab-badge {
+  justify-content: center;
+}
+
+.prefab-process-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+
+.prefab-process-step {
+  position: relative;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.prefab-process-number {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: var(--prefab-orange);
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.prefab-process-icon {
+  width: 29px;
+  height: 29px;
+  color: var(--prefab-orange);
+  margin-bottom: 11px;
+}
+
+.prefab-process-step h3 {
+  font-size: 14px;
+  margin: 0 0 8px;
+}
+
+.prefab-process-step p {
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* WHY CHOOSE US */
+
+.prefab-why {
+  position: relative;
+  padding: 55px 0;
+  background: var(--prefab-navy);
+  color: #FFFFFF;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.prefab-why-image {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(90deg, rgba(15,31,43,0.97), rgba(15,31,43,0.7)),
+    url("/images/services/prefab/prefab-why.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.prefab-why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.prefab-why .prefab-badge {
+  color: #FFFFFF;
+}
+
+.prefab-why h2 {
+  color: #FFFFFF;
+}
+
+.prefab-why p {
+  color: rgba(255,255,255,0.8);
+  max-width: 480px;
+  margin-bottom: 0;
+}
+
+.prefab-benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.prefab-benefits > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #FFFFFF;
+  line-height: 1.5;
+}
+
+.prefab-benefits svg {
+  flex-shrink: 0;
+  width: 21px;
+  height: 21px;
+  color: var(--prefab-orange);
+}
+
+/* PROJECTS */
+
+.prefab-projects-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 28px;
+}
+
+.prefab-projects-heading h2 {
+  max-width: 470px;
+}
+
+.prefab-projects-heading > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--prefab-orange);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.prefab-project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.prefab-project-card {
+  height: 245px;
+  border-radius: 9px;
+  overflow: hidden;
+  background: var(--prefab-light);
+}
+
+.prefab-project-card img {
+  transition: transform 0.5s ease;
+}
+
+.prefab-project-card:hover img {
+  transform: scale(1.06);
+}
+
+/* CTA */
+
+.prefab-cta {
+  position: relative;
+  background: var(--prefab-navy);
+  color: #FFFFFF;
+  padding: 48px 0;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.prefab-cta-image {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(90deg, rgba(17,35,48,0.97), rgba(17,35,48,0.82)),
+    url("/images/services/prefab/prefab-cta.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.prefab-cta-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.prefab-cta .prefab-badge {
+  color: #FFFFFF;
+}
+
+.prefab-cta h2 {
+  color: #FFFFFF;
+  margin-top: 10px;
+}
+
+.prefab-cta p {
+  color: rgba(255,255,255,0.82);
+  margin: 0;
+}
+
+.prefab-cta .prefab-btn {
+  flex-shrink: 0;
+  min-width: 165px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .prefab-types-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .prefab-industries-grid {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 15px;
+  }
+
+  .prefab-industry:nth-child(3) {
+    border-right: 0;
+  }
+
+  .prefab-overview-grid,
+  .prefab-engineering-grid {
+    gap: 35px;
+  }
+
+  .prefab-feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 15px;
+  }
+
+  .prefab-feature:nth-child(2) {
+    border-right: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .prefab-container {
+    width: min(100% - 32px, 540px);
+  }
+
+  .prefab-section {
+    padding: 45px 0;
+  }
+
+  .prefab-hero {
+    min-height: 500px;
+    align-items: end;
+  }
+
+  .prefab-hero-image {
+    background-position: 62% center;
+  }
+
+  .prefab-hero-overlay {
+    background: linear-gradient(
+      0deg,
+      rgba(12,28,41,0.98) 0%,
+      rgba(12,28,41,0.88) 48%,
+      rgba(12,28,41,0.25) 100%
+    );
+  }
+
+  .prefab-hero-content {
+    padding-top: 110px;
+    padding-bottom: 35px;
+  }
+
+  .prefab-hero h1 {
+    font-size: 46px;
+  }
+
+  .prefab-hero-content > p {
+    font-size: 14px;
+  }
+
+  .prefab-hero-accent {
+    width: 35px;
+    height: 65px;
+    right: 10%;
+  }
+
+  .prefab-hero-actions {
+    align-items: stretch;
+  }
+
+  .prefab-btn {
+    padding: 0 14px;
+    font-size: 13px;
+  }
+
+  .prefab-overview-grid,
+  .prefab-engineering-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .prefab-overview-image,
+  .prefab-engineering-image {
+    height: 245px;
+  }
+
+  .prefab-types-heading,
+  .prefab-projects-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .prefab-types-heading > p {
+    margin: 0;
+  }
+
+  .prefab-types-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 13px;
+  }
+
+  .prefab-type-image {
+    height: 130px;
+  }
+
+  .prefab-type-content {
+    padding: 13px 11px;
+  }
+
+  .prefab-type-content h3 {
+    font-size: 13px;
+  }
+
+  .prefab-type-content p {
+    font-size: 12px;
+  }
+
+  .prefab-check-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .prefab-industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .prefab-industry {
+    border-right: 1px solid #CFD7DD;
+    border-bottom: 1px solid #CFD7DD;
+  }
+
+  .prefab-industry:nth-child(even) {
+    border-right: 0;
+  }
+
+  .prefab-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 15px;
+  }
+
+  .prefab-process-step:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .prefab-why-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .prefab-benefits {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .prefab-project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .prefab-project-card {
+    height: 230px;
+  }
+
+  .prefab-cta-content {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .prefab-cta h2 {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 380px) {
+  .prefab-types-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .prefab-hero-actions {
+    flex-direction: column;
+  }
+
+  .prefab-hero-actions .prefab-btn {
+    width: 100%;
+  }
+}

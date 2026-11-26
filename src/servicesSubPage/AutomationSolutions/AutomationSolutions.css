@@ -1,0 +1,1079 @@
+
+/* ======================================
+   MARS POWER CONTROLS
+   AUTOMATION SOLUTIONS PAGE
+====================================== */
+
+.automation-page {
+  --auto-navy: #17232d;
+  --auto-orange: #f28c28;
+  --auto-grey: #f3f5f6;
+  --auto-text: #424b53;
+  --auto-white: #ffffff;
+
+  width: 100%;
+  overflow: hidden;
+  background: var(--auto-white);
+  color: var(--auto-navy);
+  font-family: "Inter", sans-serif;
+}
+
+.automation-page *,
+.automation-page *::before,
+.automation-page *::after {
+  box-sizing: border-box;
+}
+
+.automation-page img {
+  display: block;
+  width: 100%;
+}
+
+.automation-page a {
+  text-decoration: none;
+}
+
+.automation-container {
+  width: min(1240px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* Badge */
+
+.automation-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 25px;
+  padding: 3px 12px;
+  border: 1.5px solid var(--auto-orange);
+  border-radius: 30px;
+  background: #fff;
+  color: var(--auto-navy);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.automation-badge-slashes {
+  display: inline-flex;
+  gap: 3px;
+  transform: skew(-24deg);
+}
+
+.automation-badge-slashes i {
+  width: 4px;
+  height: 12px;
+  background: var(--auto-orange);
+}
+
+/* Hero */
+
+.automation-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 270px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(12, 25, 36, 0.98) 0%,
+      rgba(12, 25, 36, 0.9) 38%,
+      rgba(12, 25, 36, 0.12) 100%
+    ),
+    url("/images/services/automation/automation-hero.jpg")
+    center 48% / cover no-repeat;
+}
+
+.automation-hero::after {
+  position: absolute;
+  right: 5%;
+  bottom: 0;
+  width: 95px;
+  height: 65px;
+  background: var(--auto-orange);
+  content: "";
+  clip-path: polygon(35% 0, 100% 0, 65% 100%, 0 100%);
+}
+
+.automation-hero-inner {
+  position: relative;
+  z-index: 1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.automation-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+  color: #fff;
+  font-size: 13px;
+}
+
+.automation-breadcrumb a {
+  color: #fff;
+}
+
+.automation-breadcrumb span:last-child {
+  color: var(--auto-orange);
+}
+
+.automation-hero-content {
+  max-width: 480px;
+}
+
+.automation-hero-content h1 {
+  margin: 0 0 10px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(36px, 4.5vw, 51px);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.automation-hero-content h1 span {
+  color: var(--auto-orange);
+}
+
+.automation-hero-content p {
+  max-width: 400px;
+  margin: 0 0 17px;
+  color: #e8edf0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.automation-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.automation-primary-button,
+.automation-outline-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 42px;
+  padding: 10px 17px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 800;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.automation-primary-button {
+  background: var(--auto-orange);
+  color: #fff;
+}
+
+.automation-primary-button:hover {
+  background: #d97616;
+}
+
+.automation-outline-button {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  color: #fff;
+}
+
+.automation-outline-button:hover {
+  background: #fff;
+  color: var(--auto-navy);
+}
+
+.automation-primary-button svg,
+.automation-outline-button svg {
+  width: 17px;
+  height: 17px;
+}
+
+/* Overview */
+
+.automation-overview {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  align-items: center;
+  gap: 35px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.automation-overview-image {
+  position: relative;
+  height: 215px;
+  margin-left: 12px;
+}
+
+.automation-overview-image::before {
+  position: absolute;
+  top: 22px;
+  bottom: 0;
+  left: -12px;
+  width: 42px;
+  border-radius: 5px 0 0 5px;
+  background: var(--auto-orange);
+  content: "";
+}
+
+.automation-overview-image img {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  border-radius: 7px;
+  object-fit: cover;
+}
+
+.automation-overview-content h2 {
+  margin: 9px 0 8px;
+  color: var(--auto-navy);
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(24px, 2.7vw, 32px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.automation-overview-content > p {
+  margin: 0;
+  color: var(--auto-text);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.automation-overview-services {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.automation-overview-services > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  padding: 0 6px;
+  text-align: center;
+}
+
+.automation-overview-services > div + div {
+  border-left: 1px solid #dce1e4;
+}
+
+.automation-overview-services svg {
+  width: 27px;
+  height: 27px;
+  color: var(--auto-orange);
+  stroke-width: 1.9;
+}
+
+.automation-overview-services strong {
+  color: var(--auto-navy);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* Capabilities */
+
+.automation-capabilities-section {
+  background: #f3f5f6;
+}
+
+.automation-capabilities-inner {
+  display: grid;
+  grid-template-columns: 0.8fr 2fr;
+  align-items: center;
+  gap: 25px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.automation-capabilities-heading h2 {
+  margin: 8px 0 0;
+  color: var(--auto-navy);
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(21px, 2.4vw, 28px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.automation-capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.automation-capability {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 72px;
+  padding: 5px;
+  text-align: center;
+}
+
+.automation-capability + .automation-capability {
+  border-left: 1px solid #cbd3d8;
+}
+
+.automation-capability > svg {
+  width: 29px;
+  height: 29px;
+  color: var(--auto-orange);
+  stroke-width: 1.8;
+}
+
+.automation-capability h3 {
+  margin: 0;
+  color: var(--auto-navy);
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+/* Main Solutions */
+
+.automation-solutions-section {
+  display: grid;
+  gap: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.automation-solution-card {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: stretch;
+  min-height: 175px;
+  overflow: hidden;
+  border: 1px solid #e7ebee;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(23, 35, 45, 0.07);
+}
+
+.automation-solution-reverse {
+  grid-template-columns: 1.05fr 0.95fr;
+}
+
+.automation-solution-reverse .automation-solution-image {
+  order: 2;
+}
+
+.automation-solution-image {
+  position: relative;
+  min-height: 175px;
+  overflow: hidden;
+}
+
+.automation-solution-image::before {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 9px;
+  background: var(--auto-orange);
+  content: "";
+}
+
+.automation-solution-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 175px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.automation-solution-card:hover .automation-solution-image img {
+  transform: scale(1.04);
+}
+
+.automation-solution-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 14px 19px;
+}
+
+.automation-solution-content .automation-badge {
+  margin-bottom: 7px;
+}
+
+.automation-solution-content h2 {
+  margin: 0 0 6px;
+  color: var(--auto-navy);
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(18px, 2vw, 23px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.automation-solution-content > p {
+  margin: 0 0 9px;
+  color: var(--auto-text);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.automation-solution-content ul {
+  display: grid;
+  gap: 6px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.automation-solution-content li {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--auto-navy);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.automation-solution-content li svg {
+  flex: 0 0 17px;
+  width: 17px;
+  height: 17px;
+  color: var(--auto-orange);
+}
+
+/* Industries */
+
+.automation-industries-section {
+  background: #f3f5f6;
+}
+
+.automation-industries-inner {
+  display: grid;
+  grid-template-columns: 0.85fr 2fr;
+  align-items: center;
+  gap: 22px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.automation-industries-heading h2 {
+  margin: 8px 0 0;
+  color: var(--auto-navy);
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(21px, 2.3vw, 27px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.automation-industries-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.automation-industry {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  padding: 5px;
+  text-align: center;
+}
+
+.automation-industry + .automation-industry {
+  border-left: 1px solid #cbd3d8;
+}
+
+.automation-industry svg {
+  width: 27px;
+  height: 27px;
+  color: var(--auto-orange);
+  stroke-width: 1.8;
+}
+
+.automation-industry span {
+  color: var(--auto-navy);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* Process */
+
+.automation-process-section {
+  background: #fff;
+}
+
+.automation-process-inner {
+  display: grid;
+  grid-template-columns: 0.8fr 2fr;
+  align-items: center;
+  gap: 28px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.automation-process-heading h2 {
+  margin: 8px 0 7px;
+  color: var(--auto-navy);
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(21px, 2.4vw, 28px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.automation-process-heading p {
+  margin: 0;
+  color: var(--auto-text);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.automation-process-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.automation-process-step {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.automation-process-number {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 9px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--auto-orange);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.automation-process-line {
+  position: absolute;
+  top: 14px;
+  left: 63%;
+  width: 78%;
+  border-top: 1px solid #d2a16e;
+}
+
+.automation-process-icon {
+  display: grid;
+  width: 38px;
+  height: 36px;
+  margin-bottom: 6px;
+  place-items: center;
+  color: var(--auto-orange);
+}
+
+.automation-process-icon svg {
+  width: 26px;
+  height: 26px;
+  stroke-width: 1.8;
+}
+
+.automation-process-step h3 {
+  margin: 0;
+  color: var(--auto-navy);
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.automation-process-step p {
+  margin: 4px 0 0;
+  color: var(--auto-text);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* Why Choose Us */
+
+.automation-why-section {
+  background: var(--auto-navy);
+}
+
+.automation-why-inner {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr 0.9fr;
+  align-items: center;
+  gap: 22px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.automation-why-copy .automation-badge {
+  background: transparent;
+  color: #fff;
+}
+
+.automation-why-copy h2 {
+  margin: 8px 0 7px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(21px, 2.4vw, 28px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.automation-why-copy p {
+  margin: 0;
+  color: #e5eaed;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.automation-why-image {
+  height: 145px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.automation-why-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.automation-why-points {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.automation-why-points > div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.automation-why-points svg {
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  color: var(--auto-orange);
+}
+
+/* Related Projects */
+
+.automation-projects-section {
+  padding-top: 19px;
+  padding-bottom: 20px;
+}
+
+.automation-projects-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 13px;
+}
+
+.automation-projects-heading h2 {
+  margin: 6px 0 0;
+  color: var(--auto-navy);
+  font-family: "Montserrat", sans-serif;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.automation-view-projects {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #e66e0d;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.automation-view-projects svg {
+  width: 16px;
+  height: 16px;
+}
+
+.automation-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.automation-project-card {
+  overflow: hidden;
+  border: 1px solid #e7ebee;
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(23, 35, 45, 0.06);
+}
+
+.automation-project-image {
+  height: 130px;
+  overflow: hidden;
+}
+
+.automation-project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.automation-project-card:hover img {
+  transform: scale(1.05);
+}
+
+.automation-project-content {
+  padding: 9px 11px;
+}
+
+.automation-project-content h3 {
+  margin: 0 0 4px;
+  color: var(--auto-navy);
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.automation-project-content p {
+  margin: 0;
+  color: var(--auto-text);
+  font-size: 12px;
+}
+
+/* CTA */
+
+.automation-cta-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(12, 34, 49, 0.98),
+      rgba(12, 34, 49, 0.86)
+    ),
+    url("/images/services/automation/automation-cta.jpg")
+    center / cover no-repeat;
+}
+
+.automation-cta-section::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  background: var(--auto-orange);
+  content: "";
+  clip-path: polygon(0 0, 100% 0, 45% 100%, 0 100%);
+}
+
+.automation-cta-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  min-height: 105px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.automation-cta-copy h2 {
+  margin: 0 0 6px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(21px, 2.5vw, 29px);
+  font-weight: 800;
+}
+
+.automation-cta-copy p {
+  max-width: 600px;
+  margin: 0;
+  color: #e5eaed;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.automation-cta-button {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 9px;
+  min-height: 43px;
+  padding: 10px 18px;
+  border-radius: 7px;
+  background: var(--auto-orange);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  transition: background 0.25s ease;
+}
+
+.automation-cta-button:hover {
+  background: #d97616;
+}
+
+.automation-cta-button svg {
+  width: 17px;
+  height: 17px;
+}
+
+/* Responsive */
+
+@media (max-width: 1050px) {
+  .automation-overview {
+    gap: 23px;
+  }
+
+  .automation-capabilities-inner,
+  .automation-industries-inner,
+  .automation-process-inner {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .automation-why-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .automation-why-copy {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 760px) {
+  .automation-container {
+    width: min(100% - 32px, 560px);
+  }
+
+  .automation-hero {
+    min-height: 270px;
+    background-position: 62% center;
+  }
+
+  .automation-hero-content h1 {
+    font-size: 36px;
+  }
+
+  .automation-hero-content p {
+    max-width: 340px;
+    font-size: 13px;
+  }
+
+  .automation-overview {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+  }
+
+  .automation-overview-image {
+    height: 215px;
+  }
+
+  .automation-overview-content h2 {
+    font-size: 25px;
+  }
+
+  .automation-capabilities-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px 5px;
+  }
+
+  .automation-capability:nth-child(4) {
+    border-left: 0;
+  }
+
+  .automation-solution-card,
+  .automation-solution-reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .automation-solution-reverse .automation-solution-image {
+    order: 0;
+  }
+
+  .automation-solution-image {
+    min-height: 190px;
+    height: 190px;
+  }
+
+  .automation-solution-content {
+    padding: 15px;
+  }
+
+  .automation-industries-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px 5px;
+  }
+
+  .automation-industry:nth-child(4) {
+    border-left: 0;
+  }
+
+  .automation-process-grid {
+    gap: 5px;
+  }
+
+  .automation-process-line {
+    display: none;
+  }
+
+  .automation-why-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 17px;
+  }
+
+  .automation-why-copy {
+    grid-column: 1 / -1;
+  }
+
+  .automation-why-image {
+    height: 150px;
+  }
+
+  .automation-cta-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 13px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .automation-container {
+    width: calc(100% - 26px);
+  }
+
+  .automation-hero {
+    min-height: 285px;
+  }
+
+  .automation-hero-content h1 {
+    font-size: 32px;
+  }
+
+  .automation-hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .automation-overview-services {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px 8px;
+  }
+
+  .automation-overview-services > div:nth-child(3) {
+    border-left: 0;
+  }
+
+  .automation-capabilities-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .automation-capability:nth-child(3),
+  .automation-capability:nth-child(5) {
+    border-left: 0;
+  }
+
+  .automation-industries-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .automation-industry:nth-child(3),
+  .automation-industry:nth-child(5) {
+    border-left: 0;
+  }
+
+  .automation-process-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 4px;
+  }
+
+  .automation-process-number {
+    width: 27px;
+    height: 27px;
+  }
+
+  .automation-process-icon {
+    width: 31px;
+    height: 31px;
+  }
+
+  .automation-process-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .automation-process-step h3,
+  .automation-process-step p {
+    font-size: 12px;
+    overflow-wrap: anywhere;
+  }
+
+  .automation-why-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .automation-why-copy {
+    grid-column: auto;
+  }
+
+  .automation-why-image {
+    height: 185px;
+  }
+
+  .automation-projects-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .automation-projects-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .automation-project-image {
+    height: 160px;
+  }
+
+  .automation-cta-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .automation-page *,
+  .automation-page *::before,
+  .automation-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
