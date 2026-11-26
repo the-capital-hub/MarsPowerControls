@@ -1,0 +1,428 @@
+
+/* MAIN SECTION */
+
+.mars-services-section {
+  position: relative;
+  width: 100%;
+  padding: 20px 40px 25px;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(242,245,247,0.65), transparent 35%),
+    #ffffff;
+}
+
+/* Subtle industrial background details */
+
+.mars-services-section::before,
+.mars-services-section::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 280px;
+  height: 280px;
+  border: 1px solid rgba(23,35,45,0.055);
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.mars-services-section::before {
+  top: -190px;
+  left: -170px;
+}
+
+.mars-services-section::after {
+  right: -190px;
+  bottom: -200px;
+}
+
+/* SECTION HEADING */
+
+.mars-services-heading {
+  width: min(1100px, 100%);
+  margin: 0 auto 35px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.mars-services-heading .mars-section-badge {
+  margin-bottom: 17px;
+}
+
+.mars-services-heading h2 {
+  color: #17232d;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(30px, 3.5vw, 45px);
+  font-weight: 850;
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+  margin: 0 0 12px;
+}
+
+.mars-services-heading h2 span {
+  color: #f28c28;
+}
+
+.mars-services-heading p {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #46545e;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.mars-services-heading-line {
+  display: block;
+  width: 65px;
+  height: 4px;
+  margin: 20px auto 0;
+  border-radius: 10px;
+  background: #f28c28;
+}
+
+/* GRID */
+
+.mars-services-grid {
+  width: min(1440px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* CARD */
+
+.mars-service-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #dfe4e7;
+  border-radius: 17px;
+  box-shadow: 0 4px 12px rgba(23,35,45,0.07);
+  text-decoration: none;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.mars-service-card:hover {
+  transform: translateY(-7px);
+  border-color: #f28c28;
+  box-shadow: 0 15px 30px rgba(23,35,45,0.12);
+}
+
+/* IMAGE */
+
+.mars-service-image {
+  position: relative;
+  height: 190px;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: #e8edef;
+}
+
+.mars-service-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.65s ease;
+}
+
+.mars-service-card:hover .mars-service-image img {
+  transform: scale(1.07);
+}
+
+/* NUMBER LABEL */
+
+.mars-service-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 78px;
+  height: 42px;
+  padding: 0 20px 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: #f28c28;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 850;
+  border-radius: 0 0 25px 0;
+  z-index: 2;
+}
+
+/* ICON */
+
+.mars-service-icon {
+  position: absolute;
+  right: 12px;
+  bottom: 0;
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  color: #17232d;
+  background: #ffffff;
+  border: 1px solid #e8ecef;
+  border-radius: 15px 15px 0 15px;
+  box-shadow: 0 4px 12px rgba(23,35,45,0.12);
+  z-index: 2;
+  transform: translateY(15%);
+  transition: 0.3s ease;
+}
+
+.mars-service-card:hover .mars-service-icon {
+  color: #ffffff;
+  background: #f28c28;
+  border-color: #f28c28;
+  transform: translateY(0);
+}
+
+/* CARD CONTENT */
+
+.mars-service-content {
+  flex: 1;
+  min-height: 120px;
+  padding: 14px 15px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.mars-service-copy {
+  min-width: 0;
+}
+
+.mars-service-copy h3 {
+  color: #17232d;
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  font-weight: 850;
+  line-height: 1.3;
+  margin: 0 0 6px;
+  transition: color 0.3s ease;
+}
+
+.mars-service-card:hover .mars-service-copy h3 {
+  color: #d86d13;
+}
+
+.mars-service-copy p {
+  color: #46545e;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ARROW */
+
+.mars-service-arrow {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  color: #f28c28;
+  border: 2px solid #f28c28;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+.mars-service-card:hover .mars-service-arrow {
+  color: #ffffff;
+  background: #f28c28;
+  transform: translateX(4px);
+}
+
+/* FOOTER BUTTON */
+
+.mars-services-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  position: relative;
+  z-index: 1;
+}
+
+.mars-services-button {
+  min-height: 59px;
+  padding: 0 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: #ffffff;
+  background: #f28c28;
+  border: 1px solid #f28c28;
+  border-radius: 12px 5px 12px 5px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 850;
+  transition: 0.3s ease;
+}
+
+.mars-services-button:hover {
+  color: #ffffff;
+  background: #17232d;
+  border-color: #17232d;
+  transform: translateY(-3px);
+}
+
+/* LARGE TABLETS */
+
+@media (max-width: 1100px) {
+  .mars-services-section {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .mars-services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .mars-service-image {
+    height: 210px;
+  }
+}
+
+/* TABLETS AND MOBILE */
+
+@media (max-width: 700px) {
+  .mars-services-section {
+    padding: 20px 16px;
+  }
+
+  .mars-services-heading {
+    margin-bottom: 27px;
+  }
+
+  .mars-services-heading h2 {
+    font-size: 30px;
+    letter-spacing: -0.8px;
+  }
+
+  .mars-services-heading p {
+    font-size: 14px;
+  }
+
+  .mars-services-heading .mars-section-badge {
+    min-height: 44px;
+    font-size: 11px;
+    letter-spacing: 0.8px;
+    gap: 10px;
+  }
+
+  .mars-services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .mars-service-image {
+    height: 155px;
+  }
+
+  .mars-service-number {
+    min-width: 57px;
+    height: 34px;
+    padding: 0 13px 0 10px;
+    font-size: 15px;
+  }
+
+  .mars-service-icon {
+    width: 43px;
+    height: 43px;
+    right: 8px;
+  }
+
+  .mars-service-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .mars-service-content {
+    min-height: 130px;
+    padding: 12px 10px;
+    gap: 5px;
+    align-items: flex-start;
+  }
+
+  .mars-service-copy h3 {
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+  .mars-service-copy p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .mars-service-arrow {
+    width: 29px;
+    height: 29px;
+    margin-top: auto;
+  }
+
+  .mars-service-arrow svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .mars-services-button {
+    min-height: 53px;
+    padding: 0 22px;
+    font-size: 14px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 390px) {
+  .mars-services-section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .mars-services-grid {
+    gap: 11px;
+  }
+
+  .mars-service-image {
+    height: 125px;
+  }
+
+  .mars-service-content {
+    min-height: 140px;
+    padding: 10px 8px;
+  }
+
+  .mars-service-copy h3 {
+    font-size: 13px;
+  }
+
+  .mars-service-copy p {
+    font-size: 12px;
+  }
+
+  .mars-service-arrow {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .mars-services-section *,
+  .mars-services-section *::before,
+  .mars-services-section *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

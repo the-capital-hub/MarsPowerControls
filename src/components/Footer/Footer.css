@@ -1,0 +1,540 @@
+
+/* =========================================
+   MARS POWER CONTROLS
+   FUTURETECH FOOTER DESIGN
+========================================= */
+
+.mars-footer {
+  width: 100%;
+  overflow: hidden;
+  background: var(--color-white);
+}
+
+/* CTA SECTION */
+
+.mars-footer-cta-section {
+  padding: 36px 0 42px;
+  background: var(--color-light-grey);
+}
+
+.mars-footer-cta {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 178px;
+  padding: 28px 36px;
+  overflow: hidden;
+  background: var(--color-white);
+  border: 1px solid #E5E9EC;
+  border-radius: 18px;
+  box-shadow: 0 10px 35px rgba(23, 35, 45, 0.07);
+}
+
+.mars-footer-cta-content {
+  position: relative;
+  z-index: 3;
+  flex: 1;
+  min-width: 0;
+}
+
+.mars-footer-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 12px;
+  color: var(--color-navy);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.mars-eyebrow-line {
+  width: 48px;
+  height: 3px;
+  background: var(--color-orange);
+}
+
+.mars-footer-cta-content h2 {
+  margin-bottom: 7px;
+  color: var(--color-navy);
+  font-size: clamp(26px, 3.2vw, 40px);
+  letter-spacing: -1.4px;
+}
+
+.mars-footer-cta-content h2 span {
+  color: var(--color-orange);
+}
+
+.mars-footer-cta-content p {
+  color: var(--color-grey);
+  font-size: 15px;
+}
+
+.mars-footer-cta-divider {
+  position: relative;
+  z-index: 3;
+  width: 1px;
+  height: 65px;
+  margin: 0 34px;
+  background: #B9C0C5;
+}
+
+.mars-footer-cta-button {
+  position: relative;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-shrink: 0;
+  min-height: 52px;
+  padding: 14px 25px;
+  margin-right: 285px;
+  border-radius: 9px;
+  background: var(--color-orange);
+  color: var(--color-white);
+  font-size: 15px;
+  font-weight: 800;
+  transition: all 0.35s ease;
+}
+
+.mars-footer-cta-button:hover {
+  background: var(--color-navy);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-orange);
+}
+
+.mars-footer-cta-button svg {
+  transition: transform 0.3s ease;
+}
+
+.mars-footer-cta-button:hover svg {
+  transform: translate(4px, -4px);
+}
+
+/* CTA IMAGE */
+
+.mars-footer-cta-image {
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 34%;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.9),
+      transparent 32%
+    ),
+    url("/images/industrial-cta.jpg") center / cover no-repeat;
+  clip-path: polygon(22% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.mars-footer-cta-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 9px;
+  height: 100%;
+  background: var(--color-orange);
+  transform: skewX(-27deg);
+  transform-origin: top;
+}
+
+/* MAIN FOOTER */
+
+.mars-footer-main {
+  position: relative;
+  isolation: isolate;
+  padding-top: 60px;
+  overflow: hidden;
+  background: #102633;
+  color: var(--color-white);
+}
+
+.mars-footer-background {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(9, 31, 44, 0.98) 0%,
+      rgba(12, 36, 49, 0.97) 55%,
+      rgba(12, 36, 49, 0.72) 100%
+    ),
+    url("/images/industrial-footer.jpg") center / cover no-repeat;
+  opacity: 1;
+}
+
+/* FOUR COLUMN GRID */
+
+.mars-footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.75fr 1.05fr 1.15fr;
+  gap: 34px;
+  padding-bottom: 45px;
+}
+
+/* BRAND */
+
+.mars-footer-brand-column {
+  padding-right: 30px;
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.mars-footer-logo {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 290px;
+  height: 110px;
+  margin-bottom: 18px;
+}
+
+.mars-footer-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.mars-footer-description {
+  max-width: 350px;
+  margin-bottom: 23px;
+  color: #D1D9DE;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.mars-footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.mars-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 11px;
+  color: var(--color-white);
+  font-size: 19px;
+  transition: all 0.35s ease;
+}
+
+.mars-social-link:hover {
+  background: var(--color-orange);
+  border-color: var(--color-orange);
+  color: var(--color-white);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-orange);
+}
+
+/* FOOTER COLUMNS */
+
+.mars-footer-column h3 {
+  margin-bottom: 12px;
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.mars-footer-heading-line {
+  display: block;
+  width: 45px;
+  height: 4px;
+  margin-bottom: 23px;
+  border-radius: 10px;
+  background: var(--color-orange);
+}
+
+/* FOOTER LINKS */
+
+.mars-footer-column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.mars-footer-column ul li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #E0E5E9;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.mars-footer-column ul li a svg {
+  flex-shrink: 0;
+  color: var(--color-white);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.mars-footer-column ul li a:hover {
+  color: var(--color-orange);
+  transform: translateX(4px);
+}
+
+.mars-footer-column ul li a:hover svg {
+  color: var(--color-orange);
+  transform: translateX(3px);
+}
+
+/* CONTACT */
+
+.mars-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.mars-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #E0E5E9;
+  font-size: 13px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+  transition: color 0.3s ease;
+}
+
+.mars-contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  color: var(--color-orange);
+  transition: all 0.3s ease;
+}
+
+.mars-contact-item:hover {
+  color: var(--color-orange);
+}
+
+.mars-contact-item:hover .mars-contact-icon {
+  background: var(--color-orange);
+  color: var(--color-white);
+}
+
+/* BOTTOM BAR */
+
+.mars-footer-bottom {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  min-height: 86px;
+  padding: 18px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.mars-footer-bottom > p {
+  color: #E0E5E9;
+  font-size: 13px;
+}
+
+.mars-footer-bottom-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.mars-footer-bottom-links a {
+  color: #E0E5E9;
+  font-size: 13px;
+  transition: color 0.3s ease;
+}
+
+.mars-footer-bottom-links a:hover {
+  color: var(--color-orange);
+}
+
+/* ORANGE DECORATIVE GRAPHIC */
+
+.mars-footer-decoration {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100px;
+  height: 54px;
+  flex-shrink: 0;
+}
+
+.mars-footer-decoration span {
+  display: block;
+  width: 35px;
+  height: 50px;
+  background: var(--color-orange);
+  transform: skewX(-28deg);
+  transition: transform 0.35s ease;
+}
+
+.mars-footer-decoration:hover span {
+  transform: skewX(-28deg) translateY(-5px);
+}
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+  .mars-footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px 35px;
+  }
+
+  .mars-footer-brand-column {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .mars-footer-cta-button {
+    margin-right: 180px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .mars-footer-cta-section {
+    padding: 25px 0 30px;
+  }
+
+  .mars-footer-cta {
+    flex-wrap: wrap;
+    gap: 18px;
+    min-height: 0;
+    padding: 25px 22px;
+  }
+
+  .mars-footer-cta-content {
+    width: 100%;
+    flex: auto;
+  }
+
+  .mars-footer-cta-content h2 {
+    font-size: 28px;
+  }
+
+  .mars-footer-cta-content p {
+    font-size: 14px;
+  }
+
+  .mars-footer-cta-divider {
+    display: none;
+  }
+
+  .mars-footer-cta-button {
+    margin-right: 0;
+  }
+
+  .mars-footer-cta-image {
+    width: 45%;
+    opacity: 0.12;
+    clip-path: none;
+  }
+
+  .mars-footer-cta-image::before {
+    display: none;
+  }
+
+  .mars-footer-main {
+    padding-top: 42px;
+  }
+
+  .mars-footer-grid {
+    gap: 32px 25px;
+    padding-bottom: 35px;
+  }
+
+  .mars-footer-logo {
+    max-width: 250px;
+    height: 95px;
+  }
+
+  .mars-footer-bottom {
+    flex-wrap: wrap;
+    min-height: 0;
+    padding: 22px 0;
+  }
+
+  .mars-footer-bottom-links {
+    gap: 18px;
+  }
+
+  .mars-footer-decoration {
+    width: 75px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+  .mars-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .mars-footer-brand-column {
+    grid-column: auto;
+  }
+
+  .mars-footer-cta {
+    padding: 23px 18px;
+  }
+
+  .mars-footer-cta-content h2 {
+    font-size: 25px;
+  }
+
+  .mars-footer-cta-button {
+    min-height: 48px;
+    padding: 12px 20px;
+  }
+
+  .mars-footer-logo {
+    max-width: 225px;
+    height: 85px;
+  }
+
+  .mars-footer-socials {
+    gap: 10px;
+  }
+
+  .mars-social-link {
+    width: 44px;
+    height: 44px;
+  }
+
+  .mars-footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 17px;
+  }
+
+  .mars-footer-bottom-links {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
+
+/* MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .mars-footer *,
+  .mars-footer *::before,
+  .mars-footer *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,467 @@
+
+/* MAIN SECTION */
+
+.mars-contact-cta {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: #f5f7f8;
+}
+
+.mars-contact-container {
+  width: 100%;
+  min-height: 620px;
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  align-items: stretch;
+}
+
+/* LEFT CONTENT */
+
+.mars-contact-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 65px 45px 55px max(45px, calc((100vw - 1440px) / 2));
+  background: #ffffff;
+}
+
+/* APPROVED ORANGE BADGE */
+
+.mars-contact-badge {
+  width: fit-content;
+  min-height: 49px;
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  padding: 6px 20px 6px 11px;
+  margin-bottom: 27px;
+  border: 2px solid #f28c28;
+  border-radius: 4px 10px 4px 10px;
+  transform: skewX(-10deg);
+  color: #17232d;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+  white-space: nowrap;
+}
+
+.mars-contact-badge > span {
+  transform: skewX(10deg);
+}
+
+.mars-contact-badge-stripes {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.mars-contact-badge-stripes span {
+  width: 9px;
+  height: 31px;
+  background: #f28c28;
+  transform: skewX(-20deg);
+}
+
+/* HEADING */
+
+.mars-contact-content h2 {
+  max-width: 760px;
+  margin: 0 0 20px;
+  color: #17232d;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(38px, 4vw, 59px);
+  font-weight: 850;
+  line-height: 1.14;
+  letter-spacing: -2px;
+}
+
+.mars-contact-content h2 span {
+  display: block;
+}
+
+.mars-contact-content h2 strong {
+  color: #f28c28;
+  font-weight: 850;
+}
+
+/* DESCRIPTION */
+
+.mars-contact-description {
+  max-width: 690px;
+  margin: 0 0 29px;
+  color: #47545e;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+/* BUTTONS */
+
+.mars-contact-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.mars-contact-primary,
+.mars-contact-secondary {
+  min-height: 62px;
+  padding: 0 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 12px 5px 12px 5px;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.mars-contact-primary {
+  color: #ffffff;
+  background: #f28c28;
+  border: 2px solid #f28c28;
+  box-shadow: 0 7px 17px rgba(242,140,40,0.19);
+}
+
+.mars-contact-primary:hover {
+  color: #ffffff;
+  background: #17232d;
+  border-color: #17232d;
+  transform: translateY(-3px);
+}
+
+.mars-contact-primary svg {
+  flex-shrink: 0;
+}
+
+.mars-contact-secondary {
+  color: #17232d;
+  background: #ffffff;
+  border: 2px solid #17232d;
+}
+
+.mars-contact-secondary svg {
+  color: #f28c28;
+  flex-shrink: 0;
+}
+
+.mars-contact-secondary:hover {
+  color: #ffffff;
+  background: #17232d;
+  transform: translateY(-3px);
+}
+
+.mars-contact-secondary:hover svg {
+  color: #ffffff;
+}
+
+/* HIGHLIGHTS */
+
+.mars-contact-highlights {
+  width: min(680px, 100%);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 43px;
+}
+
+.mars-contact-highlight {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 15px;
+  border-right: 1px solid #d0d7dc;
+}
+
+.mars-contact-highlight:last-child {
+  border-right: none;
+}
+
+.mars-contact-highlight-icon {
+  width: 43px;
+  height: 43px;
+  color: #f28c28;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.mars-contact-highlight:hover .mars-contact-highlight-icon {
+  transform: translateY(-5px);
+}
+
+.mars-contact-highlight h3,
+.mars-contact-highlight p {
+  margin: 0;
+  color: #17232d;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.mars-contact-highlight p {
+  margin-top: 2px;
+}
+
+/* RIGHT IMAGE */
+
+.mars-contact-visual {
+  position: relative;
+  min-width: 0;
+  min-height: 620px;
+  overflow: hidden;
+  background: #f28c28;
+}
+
+/* DIAGONAL IMAGE FRAME */
+
+.mars-contact-image {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.mars-contact-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.8s ease;
+}
+
+.mars-contact-visual:hover .mars-contact-image img {
+  transform: scale(1.035);
+}
+
+/* CLEAN ORANGE GEOMETRIC FRAME */
+
+.mars-contact-orange-frame {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  pointer-events: none;
+}
+
+.mars-contact-orange-frame::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 17%;
+  width: 45px;
+  height: 155px;
+  background: #f28c28;
+  clip-path: polygon(45% 0, 100% 0, 55% 100%, 0 100%);
+}
+
+.mars-contact-orange-frame::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 175px;
+  height: 105px;
+  background: #f28c28;
+  clip-path: polygon(45% 0, 100% 0, 45% 100%, 0 100%);
+}
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+  .mars-contact-container {
+    grid-template-columns: 1fr 0.85fr;
+    min-height: 560px;
+  }
+
+  .mars-contact-content {
+    padding: 45px 25px 40px 30px;
+  }
+
+  .mars-contact-content h2 {
+    font-size: 40px;
+    letter-spacing: -1px;
+  }
+
+  .mars-contact-description {
+    font-size: 14px;
+  }
+
+  .mars-contact-primary,
+  .mars-contact-secondary {
+    min-height: 55px;
+    padding: 0 13px;
+    gap: 8px;
+    font-size: 13px;
+  }
+
+  .mars-contact-highlights {
+    margin-top: 32px;
+  }
+
+  .mars-contact-highlight {
+    padding: 0 8px;
+  }
+
+  .mars-contact-highlight-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .mars-contact-highlight h3,
+  .mars-contact-highlight p {
+    font-size: 13px;
+  }
+
+  .mars-contact-visual {
+    min-height: 560px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .mars-contact-container {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .mars-contact-content {
+    order: 1;
+    padding: 50px 20px 35px;
+  }
+
+  .mars-contact-badge {
+    min-height: 44px;
+    gap: 10px;
+    padding-right: 12px;
+    margin-bottom: 19px;
+    font-size: 11px;
+    letter-spacing: 0.6px;
+  }
+
+  .mars-contact-badge-stripes span {
+    height: 26px;
+  }
+
+  .mars-contact-content h2 {
+    font-size: 35px;
+    line-height: 1.2;
+  }
+
+  .mars-contact-description {
+    font-size: 14px;
+    line-height: 1.65;
+    margin-bottom: 22px;
+  }
+
+  .mars-contact-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .mars-contact-primary,
+  .mars-contact-secondary {
+    width: 100%;
+    min-height: 56px;
+    font-size: 14px;
+  }
+
+  .mars-contact-highlights {
+    margin-top: 30px;
+  }
+
+  .mars-contact-highlight {
+    padding: 0 7px;
+  }
+
+  .mars-contact-highlight-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 8px;
+  }
+
+  .mars-contact-highlight h3,
+  .mars-contact-highlight p {
+    font-size: 12px;
+  }
+
+  .mars-contact-visual {
+    order: 2;
+    min-height: 350px;
+    height: 350px;
+  }
+
+  .mars-contact-image {
+    clip-path: none;
+  }
+
+  .mars-contact-orange-frame::before {
+    left: auto;
+    right: 0;
+    width: 55px;
+    height: 85px;
+  }
+
+  .mars-contact-orange-frame::after {
+    width: 100px;
+    height: 65px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 390px) {
+  .mars-contact-content {
+    padding: 42px 14px 30px;
+  }
+
+  .mars-contact-content h2 {
+    font-size: 30px;
+  }
+
+  .mars-contact-badge {
+    gap: 8px;
+    padding-left: 8px;
+    padding-right: 9px;
+    font-size: 10px;
+  }
+
+  .mars-contact-highlights {
+    margin-top: 25px;
+  }
+
+  .mars-contact-highlight {
+    padding: 0 4px;
+  }
+
+  .mars-contact-highlight h3,
+  .mars-contact-highlight p {
+    font-size: 12px;
+  }
+
+  .mars-contact-visual {
+    min-height: 270px;
+    height: 270px;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .mars-contact-cta *,
+  .mars-contact-cta *::before,
+  .mars-contact-cta *::after {
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,703 @@
+
+/* MAIN SECTION */
+
+.mars-about-section {
+  width: 100%;
+  padding: 65px 0 45px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.mars-about-container,
+.mars-stats-container,
+.mars-company-video-section {
+  width: min(1440px, calc(100% - 80px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ABOUT LAYOUT */
+
+.mars-about-container {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 65px;
+  margin-bottom: 35px;
+}
+
+/* LEFT IMAGE */
+
+.mars-about-visual {
+  position: relative;
+  padding: 15px 22px 18px 0;
+  min-width: 0;
+}
+
+.mars-about-image-frame {
+  width: 100%;
+  height: 440px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: 38px 12px 38px 12px;
+  background: #e7ebed;
+}
+
+.mars-about-image-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.mars-about-visual:hover .mars-about-image-frame img {
+  transform: scale(1.035);
+}
+
+.mars-about-orange-frame {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.mars-frame-top {
+  top: 0;
+  left: 18px;
+  width: 42%;
+  height: 38%;
+  border-top: 14px solid #f28c28;
+  border-left: 14px solid #f28c28;
+  border-radius: 30px 0 0 0;
+}
+
+.mars-frame-bottom {
+  right: 5px;
+  bottom: 5px;
+  width: 32%;
+  height: 25%;
+  border-right: 13px solid #f28c28;
+  border-bottom: 13px solid #f28c28;
+  border-radius: 0 0 25px 0;
+}
+
+/* APPROVED ORANGE SECTION BADGE */
+
+.mars-section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  min-height: 48px;
+  padding: 6px 20px 6px 11px;
+  margin-bottom: 20px;
+  border: 2px solid #f28c28;
+  border-radius: 4px 10px 4px 10px;
+  transform: skewX(-10deg);
+  color: #17232d;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.mars-section-badge > span {
+  transform: skewX(10deg);
+}
+
+.mars-badge-stripes {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.mars-badge-stripes span {
+  width: 9px;
+  height: 31px;
+  background: #f28c28;
+  transform: skewX(-20deg);
+}
+
+/* ABOUT CONTENT */
+
+.mars-about-content h2 {
+  color: #17232d;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(32px, 3.4vw, 45px);
+  line-height: 1.15;
+  font-weight: 850;
+  letter-spacing: -1.5px;
+  margin: 0 0 17px;
+}
+
+.mars-about-content h2 span {
+  display: block;
+  color: #f28c28;
+}
+
+.mars-about-description {
+  max-width: 720px;
+  color: #394955;
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0 0 20px;
+}
+
+/* NUMBERED HIGHLIGHTS */
+
+.mars-about-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 25px;
+}
+
+.mars-about-highlight {
+  min-width: 0;
+  padding: 0 16px;
+  border-right: 1px solid #d3dbe0;
+}
+
+.mars-about-highlight:first-child {
+  padding-left: 0;
+}
+
+.mars-about-highlight:last-child {
+  border-right: 0;
+  padding-right: 0;
+}
+
+.mars-highlight-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 49px;
+  margin-bottom: 7px;
+}
+
+.mars-highlight-top svg {
+  color: #f28c28;
+  flex-shrink: 0;
+}
+
+.mars-highlight-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 43px;
+  height: 32px;
+  padding: 0 8px;
+  background: #fff0e1;
+  color: #17232d;
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  font-weight: 850;
+  transform: skewX(-12deg);
+}
+
+.mars-about-highlight h3 {
+  color: #17232d;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 800;
+  margin: 0 0 5px;
+}
+
+.mars-about-highlight p {
+  color: #394955;
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* CTA BUTTON */
+
+.mars-about-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  min-height: 56px;
+  padding: 0 26px;
+  background: #f28c28;
+  border: 1px solid #f28c28;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 800;
+  transition: 0.3s ease;
+}
+
+.mars-about-button:hover {
+  background: #17232d;
+  border-color: #17232d;
+  transform: translateY(-3px);
+}
+
+/* STATISTICS BAR */
+
+.mars-stats-container {
+  margin-bottom: 22px;
+}
+
+.mars-stats-bar {
+  min-height: 108px;
+  padding: 16px 25px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+  background: #10202d;
+  border-radius: 24px 6px 24px 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mars-stats-bar::before,
+.mars-stats-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 9px;
+  height: 100%;
+  background: #f28c28;
+  transform: skewX(-22deg);
+}
+
+.mars-stats-bar::before {
+  left: 17px;
+}
+
+.mars-stats-bar::after {
+  right: 17px;
+}
+
+.mars-stat-item {
+  min-height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border-right: 1px solid rgba(255,255,255,0.42);
+  position: relative;
+  z-index: 1;
+}
+
+.mars-stat-item:last-child {
+  border-right: 0;
+}
+
+.mars-stat-icon {
+  color: #f28c28;
+  flex-shrink: 0;
+}
+
+.mars-stat-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mars-stat-text strong {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 29px;
+  line-height: 1.1;
+  font-weight: 850;
+}
+
+.mars-stat-text span {
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* COMPANY VIDEO */
+
+.mars-company-video-section {
+  position: relative;
+  height: 370px;
+  background: #101d28;
+  border-radius: 17px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.mars-company-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #101d28;
+}
+
+.mars-video-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    rgba(8,20,30,0.96) 0%,
+    rgba(8,20,30,0.80) 34%,
+    rgba(8,20,30,0.20) 100%
+  );
+  pointer-events: none;
+}
+
+.mars-video-content {
+  width: 42%;
+  padding-left: 60px;
+}
+
+.mars-video-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 16px;
+}
+
+.mars-video-label span {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 13px solid #f28c28;
+}
+
+.mars-video-content h2 {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(30px, 3.2vw, 42px);
+  line-height: 1.2;
+  font-weight: 850;
+  margin: 0 0 13px;
+}
+
+.mars-video-content h2 span {
+  display: block;
+  color: #f28c28;
+}
+
+.mars-video-content p {
+  max-width: 390px;
+  color: rgba(255,255,255,0.9);
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* VIDEO PLAY BUTTON */
+
+.mars-video-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 82px;
+  height: 82px;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  background: rgba(255,255,255,0.10);
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: 0.3s ease;
+}
+
+.mars-video-play:hover {
+  background: #f28c28;
+  border-color: #f28c28;
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.mars-video-play svg {
+  margin-left: 5px;
+}
+
+/* PAUSE BUTTON */
+
+.mars-video-pause {
+  position: absolute;
+  z-index: 5;
+  top: 18px;
+  right: 18px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  background: rgba(10,24,35,0.8);
+  border: 1px solid rgba(255,255,255,0.7);
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.mars-company-video-section:hover .mars-video-pause {
+  opacity: 1;
+}
+
+.mars-video-pause:hover {
+  background: #f28c28;
+}
+
+/* TABLET */
+
+@media (max-width: 1050px) {
+  .mars-about-container,
+  .mars-stats-container,
+  .mars-company-video-section {
+    width: calc(100% - 50px);
+  }
+
+  .mars-about-container {
+    gap: 35px;
+  }
+
+  .mars-about-image-frame {
+    height: 390px;
+  }
+
+  .mars-about-content h2 {
+    font-size: 35px;
+  }
+
+  .mars-about-highlight {
+    padding: 0 9px;
+  }
+
+  .mars-highlight-top {
+    gap: 8px;
+  }
+
+  .mars-highlight-top svg {
+    width: 33px;
+  }
+
+  .mars-about-highlight h3 {
+    font-size: 12px;
+  }
+
+  .mars-about-highlight p {
+    font-size: 12px;
+  }
+
+  .mars-stat-item {
+    gap: 9px;
+  }
+
+  .mars-stat-icon {
+    width: 37px;
+  }
+
+  .mars-stat-text strong {
+    font-size: 24px;
+  }
+
+  .mars-stat-text span {
+    font-size: 12px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .mars-about-section {
+    padding: 45px 0 35px;
+  }
+
+  .mars-about-container,
+  .mars-stats-container,
+  .mars-company-video-section {
+    width: calc(100% - 32px);
+  }
+
+  .mars-about-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  .mars-about-image-frame {
+    height: 330px;
+  }
+
+  .mars-section-badge {
+    min-height: 44px;
+    font-size: 11px;
+    letter-spacing: 0.8px;
+    gap: 10px;
+    margin-bottom: 17px;
+  }
+
+  .mars-badge-stripes span {
+    height: 26px;
+  }
+
+  .mars-about-content h2 {
+    font-size: 34px;
+    letter-spacing: -1px;
+  }
+
+  .mars-about-description {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .mars-about-highlights {
+    gap: 0;
+  }
+
+  .mars-highlight-top {
+    gap: 7px;
+  }
+
+  .mars-highlight-top svg {
+    width: 27px;
+    height: 27px;
+  }
+
+  .mars-highlight-number {
+    min-width: 34px;
+    height: 27px;
+    font-size: 13px;
+  }
+
+  .mars-about-highlight {
+    padding: 0 8px;
+  }
+
+  .mars-about-highlight h3 {
+    font-size: 12px;
+  }
+
+  .mars-about-highlight p {
+    font-size: 12px;
+  }
+
+  .mars-about-button {
+    min-height: 51px;
+    font-size: 13px;
+  }
+
+  /* STATISTICS */
+
+  .mars-stats-container {
+    margin-bottom: 20px;
+  }
+
+  .mars-stats-bar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px 4px;
+    padding: 19px 14px;
+  }
+
+  .mars-stat-item {
+    justify-content: flex-start;
+    padding: 8px 9px;
+    border-right: 0;
+    gap: 8px;
+  }
+
+  .mars-stat-icon {
+    width: 29px;
+    height: 29px;
+  }
+
+  .mars-stat-text strong {
+    font-size: 22px;
+  }
+
+  .mars-stat-text span {
+    font-size: 12px;
+  }
+
+  /* VIDEO */
+
+  .mars-company-video-section {
+    height: 350px;
+    border-radius: 12px;
+  }
+
+  .mars-video-overlay {
+    align-items: flex-start;
+    background: linear-gradient(
+      90deg,
+      rgba(8,20,30,0.95),
+      rgba(8,20,30,0.55)
+    );
+  }
+
+  .mars-video-content {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .mars-video-content h2 {
+    font-size: 31px;
+  }
+
+  .mars-video-content p {
+    font-size: 13px;
+  }
+
+  .mars-video-play {
+    width: 65px;
+    height: 65px;
+    top: 66%;
+  }
+}
+
+@media (max-width: 390px) {
+  .mars-about-image-frame {
+    height: 285px;
+  }
+
+  .mars-about-content h2 {
+    font-size: 30px;
+  }
+
+  .mars-about-highlights {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .mars-about-highlight {
+    display: grid;
+    grid-template-columns: 105px 1fr;
+    border-right: 0;
+    border-bottom: 1px solid #d9dfe3;
+    padding: 10px 0;
+  }
+
+  .mars-highlight-top {
+    grid-row: span 2;
+    margin: 0;
+  }
+
+  .mars-about-highlight h3,
+  .mars-about-highlight p {
+    grid-column: 2;
+  }
+
+  .mars-about-highlight:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mars-about-section *,
+  .mars-about-section *::before,
+  .mars-about-section *::after {
+    transition-duration: 0.01ms !important;
+  }
+}

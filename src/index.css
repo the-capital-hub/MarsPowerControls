@@ -1,0 +1,652 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+/* ========================================
+   MARS POWER CONTROLS
+   FUTURETECH INDUSTRIAL DESIGN SYSTEM
+======================================== */
+
+:root {
+  /* Brand Colors */
+
+  --color-orange: #F28C28;
+  --color-orange-light: #FF9C3D;
+  --color-navy: #17232D;
+  --color-charcoal: #424B53;
+  --color-grey: #777777;
+  --color-light-grey: #F3F5F6;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+
+  /* Backgrounds */
+
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F3F5F6;
+  --bg-dark: #17232D;
+  --bg-card: #FFFFFF;
+
+  /* Typography */
+
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --text-primary: #17232D;
+  --text-secondary: #777777;
+  --text-light: #FFFFFF;
+  --text-accent: #F28C28;
+
+  /* Font Sizes */
+
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 22px;
+  --text-2xl: 30px;
+  --text-3xl: 40px;
+  --text-4xl: 56px;
+  --text-5xl: 76px;
+
+  /* Spacing */
+
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 20px;
+  --space-xl: 30px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+
+  /* Layout */
+
+  --container-width: 1440px;
+  --section-padding: 72px;
+
+  /* Border */
+
+  --border-light: #E7EAED;
+  --border-dark: rgba(255, 255, 255, 0.15);
+
+  /* Effects */
+
+  --shadow-sm: 0 4px 15px rgba(23, 35, 45, 0.06);
+  --shadow-md: 0 10px 30px rgba(23, 35, 45, 0.10);
+  --shadow-lg: 0 20px 50px rgba(23, 35, 45, 0.14);
+  --shadow-orange: 0 8px 25px rgba(242, 140, 40, 0.20);
+
+  /* Radius */
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+
+  /* Transitions */
+
+  --transition-fast: 0.25s ease;
+  --transition-normal: 0.4s ease;
+  --transition-smooth: 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ========================================
+   RESET
+======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+  font-size: 16px;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  background: var(--bg-primary);
+  color: var(--text-primary);
+
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-body);
+  font-size: 14px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+  object-fit: cover;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+input,
+textarea,
+select {
+  outline: none;
+}
+
+/* ========================================
+   TYPOGRAPHY
+======================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--color-navy);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+
+h1 {
+  font-size: clamp(36px, 6vw, 76px);
+}
+
+h2 {
+  font-size: clamp(28px, 4vw, 52px);
+}
+
+h3 {
+  font-size: clamp(22px, 2.5vw, 32px);
+}
+
+h4 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--color-grey);
+}
+
+small {
+  font-size: 12px;
+}
+
+/* ========================================
+   LAYOUT
+======================================== */
+
+.container {
+  width: min(100% - 48px, var(--container-width));
+  margin-inline: auto;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  padding-block: var(--section-padding);
+}
+
+.section-light {
+  background: var(--color-white);
+  color: var(--color-navy);
+}
+
+.section-grey {
+  background: var(--color-light-grey);
+  color: var(--color-navy);
+}
+
+.section-dark {
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+
+.section-dark h1,
+.section-dark h2,
+.section-dark h3,
+.section-dark h4 {
+  color: var(--color-white);
+}
+
+.section-dark p {
+  color: #D1D8DE;
+}
+
+.section-heading {
+  max-width: 850px;
+  margin-bottom: 36px;
+}
+
+.section-heading h2 {
+  margin-bottom: 14px;
+}
+
+.section-heading p {
+  max-width: 650px;
+}
+
+/* ========================================
+   BRAND UTILITIES
+======================================== */
+
+.text-orange {
+  color: var(--color-orange);
+}
+
+.text-navy {
+  color: var(--color-navy);
+}
+
+.text-grey {
+  color: var(--color-grey);
+}
+
+.text-white {
+  color: var(--color-white);
+}
+
+.gradient-text {
+  background: linear-gradient(
+    100deg,
+    #F28C28,
+    #FFB15E
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.orange-line {
+  width: 64px;
+  height: 3px;
+  background: var(--color-orange);
+  border-radius: 10px;
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 48px;
+  padding: 12px 24px;
+
+  border-radius: var(--radius-sm);
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition:
+    background var(--transition-normal),
+    color var(--transition-normal),
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+.btn-primary {
+  background: var(--color-orange);
+  color: var(--color-black);
+}
+
+.btn-primary:hover {
+  background: var(--color-orange-light);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-orange);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--color-navy);
+  color: var(--color-navy);
+}
+
+.btn-outline:hover {
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+
+.btn-dark {
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+
+.btn-dark:hover {
+  background: var(--color-orange);
+  color: var(--color-black);
+  transform: translateY(-3px);
+}
+
+/* ========================================
+   CARDS
+======================================== */
+
+.card {
+  position: relative;
+  overflow: hidden;
+
+  background: var(--color-white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+
+  transition:
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal),
+    border-color var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-orange);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-dark {
+  background: var(--color-navy);
+  border-color: var(--border-dark);
+  color: var(--color-white);
+}
+
+/* ========================================
+   FORMS
+======================================== */
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 14px 16px;
+
+  background: var(--color-white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+
+  color: var(--color-navy);
+  font-size: 14px;
+
+  transition: border-color var(--transition-fast);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--color-orange);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #777777;
+  font-size: 14px;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* ========================================
+   IMAGE EFFECTS
+======================================== */
+
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.06);
+}
+
+/* ========================================
+   FUTURISTIC DESIGN ELEMENTS
+======================================== */
+
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(23, 35, 45, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 35, 45, 0.04) 1px, transparent 1px);
+
+  background-size: 40px 40px;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.accent-glow {
+  box-shadow: var(--shadow-orange);
+}
+
+/* ========================================
+   ANIMATION UTILITIES
+======================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulseOrange {
+  0%, 100% {
+    box-shadow: 0 0 0 rgba(242, 140, 40, 0);
+  }
+
+  50% {
+    box-shadow: 0 0 24px rgba(242, 140, 40, 0.25);
+  }
+}
+
+.float-animation {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* ========================================
+   SCROLLBAR
+======================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-light-grey);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-orange);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-orange-light);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 1024px) {
+  :root {
+    --section-padding: 60px;
+  }
+
+  .container {
+    width: min(100% - 40px, var(--container-width));
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 44px;
+  }
+
+  h1 {
+    font-size: clamp(32px, 9vw, 48px);
+  }
+
+  h2 {
+    font-size: clamp(26px, 7vw, 36px);
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  .container {
+    width: calc(100% - 32px);
+  }
+
+  .section-heading {
+    margin-bottom: 28px;
+  }
+
+  .btn {
+    min-height: 46px;
+    padding: 12px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --section-padding: 36px;
+  }
+
+  .container {
+    width: calc(100% - 28px);
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-orange);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

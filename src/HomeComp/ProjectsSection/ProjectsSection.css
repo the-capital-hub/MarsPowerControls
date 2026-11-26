@@ -1,0 +1,531 @@
+
+/* MAIN SECTION */
+
+.mars-projects-section {
+  position: relative;
+  width: 100%;
+  padding: 25px 40px 25px;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(243,245,246,0.8), transparent 40%),
+    #ffffff;
+}
+
+/* Subtle industrial background graphics */
+
+.mars-projects-section::before,
+.mars-projects-section::after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border: 1px solid rgba(23,35,45,0.055);
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.mars-projects-section::before {
+  top: -175px;
+  left: -165px;
+}
+
+.mars-projects-section::after {
+  right: -175px;
+  bottom: -190px;
+}
+
+/* SECTION HEADING */
+
+.mars-projects-heading {
+  width: min(1100px, 100%);
+  margin: 0 auto 32px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+/* APPROVED HEADING BADGE */
+
+.mars-projects-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  min-height: 49px;
+  padding: 6px 20px 6px 11px;
+  margin-bottom: 18px;
+  border: 2px solid #f28c28;
+  border-radius: 4px 10px 4px 10px;
+  transform: skewX(-10deg);
+  color: #17232d;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.mars-projects-badge > span {
+  transform: skewX(10deg);
+}
+
+.mars-projects-badge-stripes {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.mars-projects-badge-stripes span {
+  width: 9px;
+  height: 31px;
+  background: #f28c28;
+  transform: skewX(-20deg);
+}
+
+/* MAIN HEADING */
+
+.mars-projects-heading h2 {
+  color: #17232d;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(32px, 3.6vw, 48px);
+  line-height: 1.2;
+  font-weight: 850;
+  letter-spacing: -1.6px;
+  margin: 0 0 13px;
+}
+
+.mars-projects-heading h2 span {
+  color: #f28c28;
+}
+
+.mars-projects-heading p {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #46545e;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.mars-projects-heading-line {
+  display: block;
+  width: 75px;
+  height: 5px;
+  margin: 20px auto 0;
+  background: #f28c28;
+  border-radius: 10px;
+}
+
+/* FILTER BUTTONS */
+
+.mars-project-filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 0 auto 35px;
+  position: relative;
+  z-index: 1;
+}
+
+.mars-project-filters button {
+  min-width: 150px;
+  min-height: 50px;
+  padding: 0 23px;
+  border: 1.5px solid #cbd3da;
+  border-radius: 30px;
+  background: #ffffff;
+  color: #17232d;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.mars-project-filters button:hover {
+  border-color: #f28c28;
+  color: #e77b17;
+}
+
+.mars-project-filters button.active {
+  color: #ffffff;
+  background: #f28c28;
+  border-color: #f28c28;
+  box-shadow: 0 5px 15px rgba(242,140,40,0.18);
+}
+
+/* PROJECT GRID */
+
+.mars-projects-grid {
+  width: min(1440px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* PROJECT CARD */
+
+.mars-project-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #d6dee4;
+  border-radius: 20px 20px 17px 17px;
+  box-shadow: 0 5px 12px rgba(23,35,45,0.07);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.mars-project-card:hover {
+  transform: translateY(-7px);
+  border-color: #f28c28;
+  box-shadow: 0 15px 30px rgba(23,35,45,0.12);
+}
+
+/* PROJECT IMAGE */
+
+.mars-project-image {
+  width: 100%;
+  height: 235px;
+  position: relative;
+  overflow: hidden;
+  background: #e8edef;
+}
+
+.mars-project-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.65s ease;
+}
+
+.mars-project-card:hover .mars-project-image img {
+  transform: scale(1.07);
+}
+
+.mars-project-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(10,25,36,0.08),
+    transparent 55%,
+    rgba(10,25,36,0.12)
+  );
+  pointer-events: none;
+}
+
+/* NUMBER LABEL */
+
+.mars-project-number {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  min-width: 85px;
+  height: 47px;
+  padding: 0 19px 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: #f28c28;
+  font-family: "Montserrat", sans-serif;
+  font-size: 21px;
+  font-weight: 850;
+  border-radius: 0 0 24px 0;
+}
+
+/* CARD CONTENT */
+
+.mars-project-content {
+  flex: 1;
+  min-height: 109px;
+  padding: 15px 17px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.mars-project-content h3 {
+  color: #17232d;
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  font-weight: 850;
+  line-height: 1.35;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.mars-project-card:hover .mars-project-content h3 {
+  color: #d86d13;
+}
+
+/* CATEGORY ROW */
+
+.mars-project-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.mars-project-category {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.mars-project-category svg {
+  color: #f28c28;
+  flex-shrink: 0;
+}
+
+.mars-project-category span {
+  color: #263744;
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+/* CIRCULAR ARROW */
+
+.mars-project-arrow {
+  width: 41px;
+  height: 41px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  background: #f28c28;
+  border-radius: 50%;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.mars-project-card:hover .mars-project-arrow {
+  background: #17232d;
+  transform: translateX(4px);
+}
+
+/* VIEW ALL PROJECTS */
+
+.mars-projects-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+  position: relative;
+  z-index: 1;
+}
+
+.mars-projects-button {
+  min-width: 340px;
+  min-height: 65px;
+  padding: 0 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  color: #ffffff;
+  background: #f28c28;
+  border: 1px solid #f28c28;
+  border-radius: 14px 5px 14px 5px;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 19px;
+  font-weight: 850;
+  transition: 0.3s ease;
+}
+
+.mars-projects-button:hover {
+  background: #17232d;
+  border-color: #17232d;
+  transform: translateY(-3px);
+}
+
+.mars-projects-button svg {
+  transition: transform 0.3s ease;
+}
+
+.mars-projects-button:hover svg {
+  transform: translateX(5px);
+}
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+  .mars-projects-section {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .mars-projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .mars-project-image {
+    height: 230px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .mars-projects-section {
+    padding: 20px 16px;
+  }
+
+  .mars-projects-heading {
+    margin-bottom: 25px;
+  }
+
+  .mars-projects-heading h2 {
+    font-size: 30px;
+    letter-spacing: -0.8px;
+  }
+
+  .mars-projects-heading p {
+    font-size: 14px;
+  }
+
+  .mars-projects-badge {
+    min-height: 44px;
+    font-size: 11px;
+    letter-spacing: 0.8px;
+    gap: 10px;
+  }
+
+  .mars-projects-badge-stripes span {
+    height: 26px;
+  }
+
+  .mars-project-filters {
+    gap: 9px;
+    margin-bottom: 23px;
+  }
+
+  .mars-project-filters button {
+    min-width: auto;
+    min-height: 42px;
+    padding: 0 16px;
+    font-size: 12px;
+  }
+
+  .mars-projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+  }
+
+  .mars-project-image {
+    height: 155px;
+  }
+
+  .mars-project-number {
+    min-width: 57px;
+    height: 35px;
+    padding: 0 12px;
+    font-size: 15px;
+  }
+
+  .mars-project-content {
+    min-height: 115px;
+    padding: 11px 10px;
+    gap: 10px;
+  }
+
+  .mars-project-content h3 {
+    font-size: 13px;
+  }
+
+  .mars-project-category {
+    gap: 6px;
+  }
+
+  .mars-project-category svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .mars-project-category span {
+    font-size: 12px;
+  }
+
+  .mars-project-arrow {
+    width: 30px;
+    height: 30px;
+  }
+
+  .mars-project-arrow svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .mars-projects-footer {
+    margin-top: 25px;
+  }
+
+  .mars-projects-button {
+    min-width: 0;
+    width: min(100%, 330px);
+    min-height: 55px;
+    font-size: 15px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 390px) {
+  .mars-projects-section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .mars-projects-grid {
+    gap: 10px;
+  }
+
+  .mars-project-image {
+    height: 125px;
+  }
+
+  .mars-project-content {
+    min-height: 125px;
+    padding: 10px 8px;
+  }
+
+  .mars-project-content h3 {
+    font-size: 12px;
+  }
+
+  .mars-project-category span {
+    font-size: 12px;
+  }
+
+  .mars-project-arrow {
+    width: 26px;
+    height: 26px;
+  }
+
+  .mars-project-arrow svg {
+    width: 14px;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .mars-projects-section *,
+  .mars-projects-section *::before,
+  .mars-projects-section *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

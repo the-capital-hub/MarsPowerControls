@@ -1,0 +1,628 @@
+
+.mars-hero {
+  min-height: 720px;
+  height: calc(100vh - 85px);
+  max-height: 900px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  isolation: isolate;
+  overflow: hidden;
+  background: #101d28;
+  color: #fff;
+}
+
+.mars-hero-background,
+.mars-hero-bg,
+.mars-hero-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.mars-hero-background {
+  z-index: -3;
+  overflow: hidden;
+}
+
+.mars-hero-bg {
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.08);
+  transition: opacity 1s ease, transform 6s ease;
+}
+
+.mars-hero-bg.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.mars-hero-overlay {
+  z-index: -2;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 20, 30, 0.97) 0%,
+      rgba(7, 20, 30, 0.88) 35%,
+      rgba(7, 20, 30, 0.48) 66%,
+      rgba(7, 20, 30, 0.26) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(7, 20, 30, 0.85) 0%,
+      transparent 45%
+    );
+}
+
+.mars-hero-container {
+  width: min(1400px, calc(100% - 100px));
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Decorative orange graphics */
+
+.mars-hero-shape {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  background: #f28c28;
+  opacity: 0.92;
+  transform: skewX(-27deg);
+}
+
+.mars-hero-shape-one {
+  width: 90px;
+  height: 100%;
+  top: -10%;
+  left: 53%;
+}
+
+.mars-hero-shape-two {
+  width: 75px;
+  height: 220px;
+  bottom: -100px;
+  right: 9%;
+}
+
+/* Content */
+
+.mars-hero-content {
+  width: min(790px, 66%);
+  padding-bottom: 85px;
+  animation: marsHeroReveal 0.8s ease both;
+  position: relative;
+  z-index: 3;
+}
+
+@keyframes marsHeroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Eyebrow badge */
+
+.mars-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 19px 8px 9px;
+  border: 2px solid #f28c28;
+  border-radius: 3px 9px 3px 9px;
+  transform: skewX(-12deg);
+  margin-bottom: 28px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.mars-hero-eyebrow > span {
+  transform: skewX(12deg);
+}
+
+.mars-eyebrow-stripes {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.mars-eyebrow-stripes span {
+  width: 8px;
+  height: 31px;
+  background: #f28c28;
+  transform: skewX(-20deg);
+}
+
+/* Heading */
+
+.mars-hero-content h1 {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(43px, 5.2vw, 72px);
+  line-height: 1.12;
+  font-weight: 600;
+  letter-spacing: -2.7px;
+  margin: 0 0 23px;
+}
+
+.mars-hero-content h1 span {
+  display: block;
+  color: #f28c28;
+}
+
+.mars-hero-description {
+  max-width: 700px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 16px;
+  line-height: 1.75;
+  margin: 0 0 32px;
+}
+
+/* CTA buttons */
+
+.mars-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.mars-hero-actions a {
+  min-height: 58px;
+  padding: 0 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.mars-hero-primary {
+  background: #f28c28;
+  color: #fff;
+  border: 1px solid #f28c28;
+}
+
+.mars-hero-primary:hover {
+  background: #fff;
+  border-color: #fff;
+  color: #17232d;
+  transform: translateY(-3px);
+}
+
+.mars-hero-secondary {
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.04);
+}
+
+.mars-hero-secondary:hover {
+  color: #17232d;
+  background: #fff;
+  transform: translateY(-3px);
+}
+
+/* Right thumbnails */
+
+.mars-hero-thumbnails {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-70%);
+  width: 174px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 5;
+}
+
+.mars-hero-thumbnail {
+  height: 112px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgba(255,255,255,0.5);
+  border-radius: 11px;
+  padding: 0;
+  background: #17232d;
+  cursor: pointer;
+  text-align: left;
+  transition: 0.35s ease;
+}
+
+.mars-hero-thumbnail img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.mars-hero-thumbnail::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(5,15,24,0.92), rgba(5,15,24,0.08));
+}
+
+.mars-hero-thumbnail:hover img {
+  transform: scale(1.1);
+}
+
+.mars-hero-thumbnail.active {
+  border: 2px solid #f28c28;
+  box-shadow: 0 0 20px rgba(242,140,40,0.5);
+}
+
+.mars-thumbnail-content {
+  position: absolute;
+  z-index: 2;
+  left: 14px;
+  bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  color: #fff;
+}
+
+.mars-thumbnail-content strong {
+  font-size: 15px;
+}
+
+.mars-thumbnail-content span {
+  font-size: 13px;
+  font-weight: 750;
+}
+
+/* Arrow controls */
+
+.mars-hero-arrow {
+  position: absolute;
+  z-index: 6;
+  top: 47%;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: rgba(7,20,30,0.35);
+  border: 1px solid rgba(255,255,255,0.8);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.mars-hero-arrow:hover {
+  background: #f28c28;
+  border-color: #f28c28;
+  transform: scale(1.08);
+}
+
+.mars-hero-prev {
+  left: -60px;
+}
+
+.mars-hero-next {
+  right: -60px;
+}
+
+/* Pagination */
+
+.mars-hero-pagination {
+  position: absolute;
+  bottom: 165px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  z-index: 5;
+}
+
+.mars-hero-pagination > button {
+  width: 26px;
+  height: 12px;
+  padding: 0;
+  border: 0;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.42);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.mars-hero-pagination > button.active {
+  width: 32px;
+  background: #f28c28;
+}
+
+.mars-pagination-progress {
+  position: absolute;
+  left: 0;
+  top: 32px;
+  width: 100%;
+  height: 3px;
+  background: rgba(255,255,255,0.4);
+  overflow: hidden;
+}
+
+.mars-pagination-progress-fill {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #f28c28;
+  transform-origin: left;
+  animation: marsProgress 5.5s linear forwards;
+}
+
+@keyframes marsProgress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/* Bottom feature bar */
+
+.mars-hero-features {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 28px;
+  min-height: 104px;
+  padding: 17px 35px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  background: rgba(9, 25, 36, 0.85);
+  border: 1px solid rgba(255,255,255,0.32);
+  border-radius: 22px 5px 22px 5px;
+  backdrop-filter: blur(12px);
+  z-index: 4;
+}
+
+.mars-hero-feature {
+  min-height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  border-right: 1px solid rgba(255,255,255,0.45);
+}
+
+.mars-hero-feature:last-child {
+  border-right: 0;
+}
+
+.mars-hero-feature > svg {
+  color: #f28c28;
+  flex-shrink: 0;
+}
+
+.mars-hero-feature div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mars-hero-feature strong,
+.mars-hero-feature span {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.mars-hero-feature strong {
+  font-weight: 800;
+}
+
+/* Tablet */
+
+@media (max-width: 1100px) {
+  .mars-hero-container {
+    width: calc(100% - 70px);
+  }
+
+  .mars-hero-content {
+    width: 72%;
+  }
+
+  .mars-hero-content h1 {
+    font-size: clamp(40px, 5.5vw, 60px);
+  }
+
+  .mars-hero-thumbnails {
+    width: 140px;
+  }
+
+  .mars-hero-thumbnail {
+    height: 95px;
+  }
+
+  .mars-hero-prev {
+    left: -25px;
+  }
+
+  .mars-hero-next {
+    right: -25px;
+  }
+
+  .mars-hero-feature {
+    gap: 10px;
+  }
+
+  .mars-hero-feature > svg {
+    width: 32px;
+  }
+
+  .mars-hero-features {
+    padding: 15px 12px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .mars-hero {
+    min-height: 760px;
+    height: auto;
+    max-height: none;
+    align-items: flex-start;
+  }
+
+  .mars-hero-container {
+    width: calc(100% - 36px);
+    min-height: 760px;
+    padding-top: 95px;
+    padding-bottom: 205px;
+    display: block;
+  }
+
+  .mars-hero-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(7,20,30,0.94),
+      rgba(7,20,30,0.76)
+    );
+  }
+
+  .mars-hero-content {
+    width: 100%;
+    padding-bottom: 0;
+  }
+
+  .mars-hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 1.2px;
+    margin-bottom: 22px;
+  }
+
+  .mars-hero-content h1 {
+    font-size: clamp(36px, 9vw, 48px);
+    letter-spacing: -1.7px;
+  }
+
+  .mars-hero-description {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+  }
+
+  .mars-hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .mars-hero-actions a {
+    min-height: 52px;
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .mars-hero-thumbnails {
+    top: auto;
+    bottom: 160px;
+    right: auto;
+    left: 0;
+    transform: none;
+    width: 100%;
+    flex-direction: row;
+    gap: 9px;
+  }
+
+  .mars-hero-thumbnail {
+    height: 78px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .mars-thumbnail-content {
+    left: 8px;
+    bottom: 8px;
+  }
+
+  .mars-thumbnail-content strong {
+    font-size: 12px;
+  }
+
+  .mars-thumbnail-content span {
+    font-size: 11px;
+  }
+
+  .mars-hero-arrow {
+    display: none;
+  }
+
+  .mars-hero-pagination {
+    bottom: 125px;
+  }
+
+  .mars-hero-features {
+    bottom: 18px;
+    min-height: 92px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 4px;
+    padding: 13px 8px;
+  }
+
+  .mars-hero-feature {
+    justify-content: flex-start;
+    border-right: 0;
+    padding-left: 8px;
+    gap: 9px;
+  }
+
+  .mars-hero-feature > svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .mars-hero-feature strong,
+  .mars-hero-feature span {
+    font-size: 12px;
+  }
+
+  .mars-hero-shape-one {
+    left: 75%;
+    opacity: 0.3;
+  }
+
+  .mars-hero-shape-two {
+    display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .mars-hero-content h1 {
+    font-size: 34px;
+  }
+
+  .mars-hero-container {
+    width: calc(100% - 28px);
+  }
+
+  .mars-hero-eyebrow {
+    letter-spacing: 0.7px;
+    padding-right: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mars-hero-bg,
+  .mars-hero-content,
+  .mars-pagination-progress-fill {
+    animation: none !important;
+    transition: none !important;
+  }
+}

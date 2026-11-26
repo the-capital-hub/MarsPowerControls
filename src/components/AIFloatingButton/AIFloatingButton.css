@@ -1,0 +1,376 @@
+
+/* ==================================
+   MARS AI FLOATING ASSISTANT
+================================== */
+
+.mars-ai-widget {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 15px;
+  font-family: var(--font-body);
+}
+
+/* FLOATING BUTTON */
+
+.mars-ai-floating-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFAC51, #F28C28);
+  color: #FFFFFF;
+  box-shadow: 0 8px 30px rgba(242, 140, 40, 0.35);
+  transition: all 0.35s ease;
+}
+
+.mars-ai-floating-btn:hover {
+  transform: translateY(-5px) scale(1.06);
+  box-shadow: 0 12px 35px rgba(242, 140, 40, 0.5);
+}
+
+.mars-ai-floating-btn.opened {
+  background: var(--color-navy);
+  box-shadow: 0 8px 25px rgba(23, 35, 45, 0.2);
+}
+
+.mars-ai-pulse {
+  position: absolute;
+  inset: -6px;
+  border: 2px solid var(--color-orange);
+  border-radius: 50%;
+  animation: marsAiPulse 2s ease-out infinite;
+  pointer-events: none;
+}
+
+@keyframes marsAiPulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+/* TOOLTIP */
+
+.mars-ai-tooltip {
+  position: absolute;
+  right: 76px;
+  bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: var(--color-navy);
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  box-shadow: var(--shadow-md);
+  animation: marsAiFloat 3s ease-in-out infinite;
+}
+
+.mars-ai-tooltip svg {
+  color: var(--color-orange);
+}
+
+@keyframes marsAiFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* CHAT WINDOW */
+
+.mars-ai-window {
+  position: absolute;
+  right: 0;
+  bottom: 82px;
+  display: flex;
+  flex-direction: column;
+  width: 390px;
+  max-width: calc(100vw - 32px);
+  max-height: min(560px, calc(100dvh - 125px));
+  overflow: hidden;
+  border: 1px solid #E7EAED;
+  border-radius: 18px;
+  background: #FFFFFF;
+  box-shadow: 0 20px 65px rgba(23, 35, 45, 0.18);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(18px) scale(0.96);
+  transform-origin: bottom right;
+  transition: all 0.35s ease;
+  pointer-events: none;
+}
+
+.mars-ai-window.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* HEADER */
+
+.mars-ai-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 19px;
+  background: var(--color-navy);
+  color: #FFFFFF;
+}
+
+.mars-ai-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mars-ai-avatar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  border-radius: 12px;
+  background: rgba(242, 140, 40, 0.16);
+  color: var(--color-orange);
+}
+
+.mars-ai-status {
+  position: absolute;
+  right: -3px;
+  bottom: -3px;
+  width: 11px;
+  height: 11px;
+  border: 2px solid var(--color-navy);
+  border-radius: 50%;
+  background: #28B77A;
+}
+
+.mars-ai-brand h3 {
+  margin-bottom: 3px;
+  color: #FFFFFF;
+  font-size: 15px;
+}
+
+.mars-ai-brand p {
+  color: #C7D0D6;
+  font-size: 12px;
+}
+
+.mars-ai-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  transition: background 0.3s ease;
+}
+
+.mars-ai-close:hover {
+  background: var(--color-orange);
+}
+
+/* BODY */
+
+.mars-ai-body {
+  flex: 1;
+  min-height: 0;
+  padding: 23px 19px;
+  overflow-y: auto;
+  background: #FFFFFF;
+}
+
+.mars-ai-welcome {
+  padding: 19px;
+  border: 1px solid #E9EDF0;
+  border-radius: 13px;
+  background: #F7F9FA;
+}
+
+.mars-ai-welcome-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  margin-bottom: 13px;
+  border-radius: 12px;
+  background: rgba(242, 140, 40, 0.13);
+  color: var(--color-orange);
+}
+
+.mars-ai-welcome h4 {
+  margin-bottom: 9px;
+  font-size: 15px;
+  color: var(--color-navy);
+}
+
+.mars-ai-welcome p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--color-grey);
+}
+
+/* SUGGESTIONS */
+
+.mars-ai-suggestions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 23px;
+}
+
+.mars-ai-suggestions > span {
+  margin-bottom: 2px;
+  color: var(--color-grey);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.mars-ai-suggestion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 43px;
+  padding: 10px 13px;
+  border: 1px solid #E6E9EC;
+  border-radius: 9px;
+  background: #FFFFFF;
+  color: var(--color-navy);
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.mars-ai-suggestion svg {
+  color: var(--color-orange);
+  flex-shrink: 0;
+}
+
+.mars-ai-suggestion:hover {
+  border-color: var(--color-orange);
+  background: #FFF8F1;
+  transform: translateX(3px);
+}
+
+/* INPUT */
+
+.mars-ai-input-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 16px;
+  border-top: 1px solid #E8EBEE;
+  background: #FFFFFF;
+}
+
+.mars-ai-input-area input {
+  min-width: 0;
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #E6E9EC;
+  border-radius: 9px;
+  background: #F7F9FA;
+  color: var(--color-navy);
+  font-size: 13px;
+}
+
+.mars-ai-input-area input:focus {
+  border-color: var(--color-orange);
+}
+
+.mars-ai-input-area button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: var(--color-orange);
+  color: #FFFFFF;
+  transition: all 0.3s ease;
+}
+
+.mars-ai-input-area button:hover:not(:disabled) {
+  background: var(--color-navy);
+  transform: translateY(-2px);
+}
+
+.mars-ai-input-area button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* FOOTER NOTE */
+
+.mars-ai-footer-note {
+  padding: 10px;
+  background: #F7F9FA;
+  color: var(--color-grey);
+  text-align: center;
+  font-size: 12px;
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+  .mars-ai-widget {
+    right: 16px;
+    bottom: 18px;
+  }
+
+  .mars-ai-floating-btn {
+    width: 58px;
+    height: 58px;
+  }
+
+  .mars-ai-window {
+    right: 0;
+    bottom: 72px;
+    width: calc(100vw - 32px);
+    max-height: calc(100dvh - 110px);
+  }
+
+  .mars-ai-tooltip {
+    right: 68px;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .mars-ai-widget *,
+  .mars-ai-widget *::before,
+  .mars-ai-widget *::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+}

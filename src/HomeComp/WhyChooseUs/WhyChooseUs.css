@@ -1,0 +1,455 @@
+
+/* MAIN SECTION */
+
+.mars-why-section {
+  position: relative;
+  width: 100%;
+  padding: 25px 0;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(243,245,246,0.8), transparent 45%),
+    #ffffff;
+}
+
+/* Subtle industrial background details */
+
+.mars-why-section::before,
+.mars-why-section::after {
+  content: "";
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  border: 1px solid rgba(23,35,45,0.055);
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.mars-why-section::before {
+  top: -175px;
+  left: -150px;
+}
+
+.mars-why-section::after {
+  right: -170px;
+  bottom: -180px;
+}
+
+/* MAIN CONTAINER */
+
+.mars-why-container {
+  width: min(1440px, calc(100% - 80px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  align-items: center;
+  gap: 65px;
+  position: relative;
+  z-index: 1;
+}
+
+/* LEFT IMAGE */
+
+.mars-why-visual {
+  position: relative;
+  min-width: 0;
+  padding: 15px 20px 18px 0;
+}
+
+.mars-why-image-frame {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 510px;
+  overflow: hidden;
+  border-radius: 38px 12px 38px 12px;
+  background: #e7ebed;
+}
+
+.mars-why-image-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.7s ease;
+}
+
+.mars-why-visual:hover .mars-why-image-frame img {
+  transform: scale(1.045);
+}
+
+/* ORANGE IMAGE FRAME */
+
+.mars-why-orange-frame {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: -13px;
+  width: 38%;
+  height: 42%;
+  border-top: 12px solid #f28c28;
+  border-left: 12px solid #f28c28;
+  border-radius: 28px 0 0 0;
+  pointer-events: none;
+}
+
+.mars-why-visual::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  right: 4px;
+  bottom: 5px;
+  width: 36%;
+  height: 25%;
+  border-right: 12px solid #f28c28;
+  border-bottom: 12px solid #f28c28;
+  border-radius: 0 0 25px 0;
+  pointer-events: none;
+}
+
+/* APPROVED ORANGE BADGE */
+
+.mars-why-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  min-height: 49px;
+  padding: 6px 20px 6px 11px;
+  margin-bottom: 23px;
+  border: 2px solid #f28c28;
+  border-radius: 4px 10px 4px 10px;
+  transform: skewX(-10deg);
+  color: #17232d;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.mars-why-badge > span {
+  transform: skewX(10deg);
+}
+
+.mars-why-badge-stripes {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.mars-why-badge-stripes span {
+  width: 9px;
+  height: 31px;
+  background: #f28c28;
+  transform: skewX(-20deg);
+}
+
+/* HEADING */
+
+.mars-why-content h2 {
+  color: #17232d;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(35px, 3.8vw, 53px);
+  font-weight: 850;
+  line-height: 1.13;
+  letter-spacing: -1.8px;
+  margin: 0 0 16px;
+}
+
+.mars-why-content h2 span {
+  display: block;
+  color: #f28c28;
+}
+
+.mars-why-description {
+  max-width: 720px;
+  color: #394955;
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ORANGE DIVIDER */
+
+.mars-why-divider {
+  width: 82px;
+  height: 5px;
+  border-radius: 10px;
+  background: #f28c28;
+  margin: 20px 0 27px;
+}
+
+/* BENEFIT GRID */
+
+.mars-why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* BENEFIT CARD */
+
+.mars-why-card {
+  min-height: 125px;
+  padding: 17px 15px;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  background: rgba(255,255,255,0.92);
+  border: 1px solid #d6dfe4;
+  border-radius: 20px 7px 20px 7px;
+  box-shadow: 0 4px 12px rgba(23,35,45,0.035);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mars-why-card:hover {
+  transform: translateY(-5px);
+  border-color: #f28c28;
+  box-shadow: 0 12px 25px rgba(23,35,45,0.09);
+}
+
+/* ORANGE ICON BOX */
+
+.mars-why-icon {
+  width: 68px;
+  height: 68px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  background: #f28c28;
+  border-radius: 15px 7px 15px 7px;
+  box-shadow: 0 5px 12px rgba(242,140,40,0.18);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.mars-why-card:hover .mars-why-icon {
+  background: #17232d;
+  transform: scale(1.05);
+}
+
+.mars-why-card-content {
+  min-width: 0;
+}
+
+.mars-why-card-content h3 {
+  color: #17232d;
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  font-weight: 850;
+  line-height: 1.35;
+  margin: 0 0 6px;
+}
+
+.mars-why-card-content p {
+  color: #394955;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* CTA BUTTON */
+
+.mars-why-button {
+  min-height: 61px;
+  width: min(100%, 520px);
+  margin: 27px auto 0;
+  padding: 0 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: #ffffff;
+  background: #f28c28;
+  border: 1px solid #f28c28;
+  border-radius: 12px 5px 12px 5px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 850;
+  transition: 0.3s ease;
+}
+
+.mars-why-button:hover {
+  color: #ffffff;
+  background: #17232d;
+  border-color: #17232d;
+  transform: translateY(-3px);
+}
+
+.mars-why-button svg {
+  transition: transform 0.3s ease;
+}
+
+.mars-why-button:hover svg {
+  transform: translateX(5px);
+}
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+  .mars-why-container {
+    width: calc(100% - 50px);
+    gap: 35px;
+  }
+
+  .mars-why-image-frame {
+    height: 440px;
+  }
+
+  .mars-why-content h2 {
+    font-size: 39px;
+  }
+
+  .mars-why-card {
+    min-height: 115px;
+    gap: 11px;
+    padding: 13px 10px;
+  }
+
+  .mars-why-icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .mars-why-icon svg {
+    width: 31px;
+  }
+
+  .mars-why-card-content h3 {
+    font-size: 14px;
+  }
+
+  .mars-why-card-content p {
+    font-size: 12px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .mars-why-section {
+    padding: 20px 0;
+  }
+
+  .mars-why-container {
+    width: calc(100% - 32px);
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .mars-why-image-frame {
+    height: 350px;
+  }
+
+  .mars-why-badge {
+    min-height: 44px;
+    gap: 10px;
+    padding-right: 12px;
+    margin-bottom: 17px;
+    font-size: 11px;
+    letter-spacing: 0.6px;
+  }
+
+  .mars-why-badge-stripes span {
+    height: 27px;
+  }
+
+  .mars-why-content h2 {
+    font-size: 35px;
+    letter-spacing: -1px;
+  }
+
+  .mars-why-description {
+    font-size: 14px;
+  }
+
+  .mars-why-divider {
+    margin: 17px 0 20px;
+  }
+
+  .mars-why-grid {
+    gap: 12px;
+  }
+
+  .mars-why-card {
+    min-height: 112px;
+    padding: 12px 9px;
+    gap: 9px;
+  }
+
+  .mars-why-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+  }
+
+  .mars-why-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .mars-why-card-content h3 {
+    font-size: 13px;
+  }
+
+  .mars-why-card-content p {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .mars-why-button {
+    min-height: 54px;
+    margin-top: 21px;
+    padding: 0 16px;
+    font-size: 14px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 390px) {
+  .mars-why-container {
+    width: calc(100% - 26px);
+  }
+
+  .mars-why-image-frame {
+    height: 290px;
+  }
+
+  .mars-why-content h2 {
+    font-size: 30px;
+  }
+
+  .mars-why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mars-why-card {
+    min-height: 90px;
+    padding: 13px;
+    gap: 15px;
+  }
+
+  .mars-why-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .mars-why-card-content h3 {
+    font-size: 14px;
+  }
+
+  .mars-why-card-content p {
+    font-size: 12px;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .mars-why-section *,
+  .mars-why-section *::before,
+  .mars-why-section *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
