@@ -263,6 +263,15 @@ function Navbar() {
             >
               Industries
             </NavLink>
+             <NavLink
+              to="/gallery"
+              className={({ isActive }) =>
+                `nav-link ${isActive ? "active" : ""}`
+              }
+              onClick={closeMenu}
+            >
+              Gallery
+            </NavLink>
 
           </div>
 

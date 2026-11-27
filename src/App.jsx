@@ -20,6 +20,7 @@ import AgriculturalFabrication from "./servicesSubPage/AgriculturalFabrication/A
 import TrussWork from "./servicesSubPage/TrussWork/TrussWork";
 import MetalFurniture from "./servicesSubPage/MetalFurniture/MetalFurniture";
 import SSMSWorks from "./servicesSubPage/SSMSWorks/SSMSWorks";
+import Gallery from "./Pages/Gallery/Gallery";
 
 function App() {
   return (
@@ -74,6 +75,7 @@ function App() {
           <Route path="/solar-solutions" element={<SolarSolutions />} />
           <Route path="/industries" element={<Industries />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </main>
       <Footer />
